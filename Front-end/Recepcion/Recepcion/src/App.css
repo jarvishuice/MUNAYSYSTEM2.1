@@ -1,0 +1,114 @@
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css);
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    font-family: monospace;
+  }
+  header{
+    border-bottom: 1px solid #374151 ;
+  }
+  /* Estilos de la barra de navegación */
+  .navbar {
+    background-color: #1f2937;
+    overflow: hidden;
+   
+   
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .navbar li {
+    float: left;
+  }
+  
+  .navbar li a {
+    display: block;
+    color:black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .nombreUsuario{
+ color: red;
+  }
+  .navbar li a:hover {
+    background-color: #ddd;
+  }
+  .card{
+    align-content: center;
+    margin-top:3%;
+    background-color: #1f2937;
+    color: whitesmoke
+    ; border: 1px solid #374151 ;
+    
+
+
+  }
+  .card img {
+    margin-top: 5%;
+    width: 80%;
+    height: 130px;
+    margin-left: 0%;
+   
+   
+  }
+  .nombreProducto{
+    width:80%;
+    height: 50px;
+    font-family: monospace;
+    font-weight: 600;
+
+  }
+  .scrollable{
+    max-height:90% ; /* Altura máxima del área scrollable */
+    overflow-y: auto; 
+  }
+  .scrollCarrito{
+    height: 200px; /* o utiliza max-height en lugar de height si prefieres una altura máxima */
+  overflow: auto;
+  }
+  .carrito{
+    border: 1px solid #374151 ;
+  }
+
+  .nombreProductoCar{
+    width: 9px;
+  }
+  /* Estilos para dispositivos móviles */
+  @media screen and (max-width: 600px) {
+    .navbar li {
+      float: left;
+      
+    }
+    
+    .navbar li a {
+      display: block;
+      text-align: center;
+    }
+    .navbar{
+        max-width: 100%;
+        
+    }
+    .nombreUsuario{
+        display: none;
+        width: 0%;
+    }
+    .scrollable{
+      max-height:75% ; /* Altura máxima del área scrollable */
+      overflow-y: auto; 
+    }
+    .card img {
+      margin-top: 5px;
+      width: 100%;
+      height: 150px;
+     
+     
+    }
+  }
