@@ -87,7 +87,7 @@ body {
   }
   .SIDEBARLOGO{
     float:right;
-    margin-left: 87%;
+ 
   }
   /* Estilos para dispositivos móviles */
   @media screen and (max-width: 600px) {
