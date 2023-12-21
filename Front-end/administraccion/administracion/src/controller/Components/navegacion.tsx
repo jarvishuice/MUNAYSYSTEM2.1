@@ -31,7 +31,7 @@ export function Navegacion(props:any){
     <Menu />
     
   </IconButton>
-  <img className="SIDEBARLOGO" style={{'width':'4rem',height:'4rem'}}  src={logoNest}/>
+  <img className="SIDEBARLOGO" style={{'width':'4rem'}}  src={logoNest}/>
   <Drawer  size='sm'    open={open} onClose={() => setOpen(false)}>
     <Box
       sx={{
