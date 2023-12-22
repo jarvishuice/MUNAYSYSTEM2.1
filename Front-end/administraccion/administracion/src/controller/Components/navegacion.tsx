@@ -1,5 +1,5 @@
 //import { PropaneSharp } from "@mui/icons-material";
-import { IconButton, Drawer, Box, Typography, ModalClose, List, ListItemButton, Avatar } from "@mui/joy";
+import { IconButton, Drawer, Box, Typography, ModalClose, List, ListItemButton, Avatar, Divider} from "@mui/joy";
 import React from "react";
 //import { Inicio } from "../../views/INICIO";
 //import { POS } from "../../views/POS";
@@ -34,7 +34,7 @@ export function Navegacion(props:any){
     
   </IconButton>
   
-  <img className="SIDEBARLOGO  "  style={{'width':'4rem'}}  src={logoNest}/>
+  <img className="SIDEBARLOGO"  style={{'width':'5rem'}}  src={logoNest}/>
   <div className="nest"><AddLocationAltIcon/> Nest {sede} </div>
   <Drawer  size='sm'    open={open} onClose={() => setOpen(false)}>
     <Box
@@ -73,6 +73,7 @@ export function Navegacion(props:any){
     >
       <center><Avatar alt="Foto perfil"  sx={{'--Avatar-size':'8rem'}}   src={foto} />
       <Typography fontSize="lg" fontWeight='lg' >{usuario}</Typography></center>
+      <Divider sx={{color:"primary",height:'1px'}}/>
       <ListItemButton onClick={()=> props.setComponente(<Inicio/>)} > { <HomeIcon/>} Inicio</ListItemButton>
       <ListItemButton onClick={()=> props.setComponente(<POS/>)} >{<LocalGroceryStoreIcon/>}POS</ListItemButton>
       <ListItemButton onClick={()=> props.setComponente(<OrdenesCompleto/>)} >{<ReceiptIcon/>}Ordenes</ListItemButton>

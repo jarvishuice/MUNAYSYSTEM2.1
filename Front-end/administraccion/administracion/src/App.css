@@ -69,6 +69,7 @@ body {
   .scrollable{
     max-height:90% ; /* Altura máxima del área scrollable */
     overflow-y: auto; 
+    background-color:#1f262e;
   }
   .scrollCarrito{
     height: 200px; /* o utiliza max-height en lugar de height si prefieres una altura máxima */
@@ -87,7 +88,7 @@ body {
   }
   .nest{
     font-family: Impact;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 1px;
     word-spacing: 0px;
     color:#ffff;
@@ -97,7 +98,7 @@ body {
     font-variant: normal;
     text-transform: uppercase;
     display: inline;
-    margin-left: 85%;
+    margin-left: 80%;
   }
   .SIDEBARLOGO{
    margin-left: 2.5%;
@@ -109,7 +110,7 @@ body {
     background-color:#1f262e;
   }
   /* Estilos para dispositivos móviles */
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 750px) {
     .navbar li {
       float: left;
       
@@ -126,7 +127,7 @@ body {
       font-variant: normal;
       text-transform: uppercase;
       display: inline;
-      margin-left: 70%;
+      margin-left: 40%;
     }
     
     .navbar li a {
