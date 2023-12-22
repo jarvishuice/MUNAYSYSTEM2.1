@@ -85,15 +85,48 @@ body {
   .sideBar{
     background-color: #0f172a;
   }
+  .nest{
+    font-family: Impact;
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 0px;
+    color:#ffff;
+    font-weight: bold;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: uppercase;
+    display: inline;
+    margin-left: 85%;
+  }
   .SIDEBARLOGO{
-    float:right;
+   margin-left: 2.5%;
+  
+  
  
+  }
+  body::-webkit-scrollbar {
+    background-color:#1f262e;
   }
   /* Estilos para dispositivos móviles */
   @media screen and (max-width: 600px) {
     .navbar li {
       float: left;
       
+    }
+    .nest{
+      font-family: Impact;
+      font-size: 10px;
+      letter-spacing: 0.5px;
+      word-spacing: 0px;
+      color:#ffff;
+      font-weight: bold;
+      text-decoration: none;
+      font-style: normal;
+      font-variant: normal;
+      text-transform: uppercase;
+      display: inline;
+      margin-left: 70%;
     }
     
     .navbar li a {

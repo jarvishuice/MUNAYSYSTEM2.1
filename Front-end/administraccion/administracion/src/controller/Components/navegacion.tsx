@@ -17,12 +17,14 @@ import GroupIcon from '@mui/icons-material/Group';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import { Visitantes } from "../../views/Visitantes";
 import { ClientesMaster } from "../../views/ClientesMAster";
+import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 
 export function Navegacion(props:any){
   const logoNest='https://www.nestvzla.com/Nest/Static/Home_files/logonest.png';
   const [open, setOpen] = React.useState(false);
   const foto:string=localStorage.getItem('fotoPerfil')??'https://img.freepik.com/premium-vector/account-icon-user-icon-vector-graphics_292645-552.jpg?size=338&ext=jpg&ga=GA1.1.1546980028.1703116800&semt=ais';
   const usuario:string =localStorage.getItem("usuario")??'Inicie seccion';
+  const sede:string=localStorage.getItem("sede")??'Inicie seccion';
   return (
     <div style={{backgroundColor:"#1f2937"}}>
  <React.Fragment>
@@ -31,7 +33,9 @@ export function Navegacion(props:any){
     <Menu />
     
   </IconButton>
-  <img className="SIDEBARLOGO" className="mt-2 mr-2" style={{'width':'4rem'}}  src={logoNest}/>
+  
+  <img className="SIDEBARLOGO  "  style={{'width':'4rem'}}  src={logoNest}/>
+  <div className="nest"><AddLocationAltIcon/> Nest {sede} </div>
   <Drawer  size='sm'    open={open} onClose={() => setOpen(false)}>
     <Box
       sx={{

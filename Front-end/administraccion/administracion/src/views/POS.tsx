@@ -4,6 +4,7 @@ import BusquedaProducto from "../controller/Components/busquedaProductos";
 import { Productos } from "../controller/Components/productos";
 import { ProductosEntity } from "../core/Entities/productos/productos";
 import { Carrito } from "../controller/Components/carrito";
+import "../../../App.css"
 
 
 export function POS(){
