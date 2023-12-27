@@ -12,4 +12,5 @@ class OrdenDetalladaEntity(BaseModel):
     precio:float
     total:float
 
+
     

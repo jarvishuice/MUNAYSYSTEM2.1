@@ -1,5 +1,6 @@
 from core.Entities.ordenes.ordenesEntity import OrdenesEntity
-from core.Entities.ordenes.detalleOrdenEntity import OrdenDetalladaEntity
+from core.Entities.ordenes.detalleOrdenEntity import OrdenDetalladaEntity,DetalleOrdenesEntity
+
 from core.Entities.clientes.deudaClienteCoffeShopEntitity import DetalleDedudaClientesEntity
 from abc import ABC,abstractmethod
 from config.Logs.LogsActivity import Logs
@@ -17,7 +18,7 @@ class IOrdenes(ABC):
     def OrdenesPorPagarBysede(sede:str)-> list[OrdenesEntity|None]:
         pass
     @abstractmethod
-    def OrdenesFilterByStatusAndSede(status,sede)->list[OrdenesEntity|None]:
+    def OrdenesFilterByStatusAndSede(status,sede)->list[OrdenDetalladaEntity|None]:
         pass
     @abstractmethod
     def OrdenesAbiertasByClienteAndSede(idCliente:int,sede:str)-> list[OrdenesEntity]: 
@@ -28,3 +29,4 @@ class IOrdenes(ABC):
     @abstractmethod 
     def getDetailOrden(idOrden:str)->list[OrdenDetalladaEntity]:
         pass
+    
