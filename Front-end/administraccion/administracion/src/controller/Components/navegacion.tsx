@@ -18,6 +18,7 @@ import HowToRegIcon from '@mui/icons-material/HowToReg';
 import { Visitantes } from "../../views/Visitantes";
 import { ClientesMaster } from "../../views/ClientesMAster";
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
+import { PDFViewer } from "./visualizadorPDF";
 
 export function Navegacion(props:any){
   const logoNest='https://www.nestvzla.com/Nest/Static/Home_files/logonest.png';
@@ -79,6 +80,7 @@ export function Navegacion(props:any){
       <ListItemButton onClick={()=> props.setComponente(<OrdenesCompleto/>)} >{<ReceiptIcon/>}Ordenes</ListItemButton>
       <ListItemButton onClick={()=> props.setComponente(<ClientesMaster/>)} >{<GroupIcon/>}Clientes</ListItemButton>
       <ListItemButton onClick={()=> props.setComponente(<Visitantes/>)} >{<HowToRegIcon/>}Visitantes</ListItemButton>
+      <ListItemButton onClick={()=> props.setComponente(<PDFViewer></PDFViewer>)}> Reportes     </ListItemButton>
       <ListItemButton>{<LogoutIcon/>}Salir</ListItemButton>
     </List>
   </Drawer>

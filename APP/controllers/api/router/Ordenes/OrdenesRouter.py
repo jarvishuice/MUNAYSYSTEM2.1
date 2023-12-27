@@ -77,3 +77,12 @@ async def getOrdenesBysede(sede)->list[OrdenesDetalladasEntity]:
        return respuesta
    else:
        raise HTTPException(400,trigger['mesagge'])
+@Ordenes.put("/delete/{idOrden}")
+async def deleteOrder(idOrden)-> bool:
+    trigger=core.deleteOrder(idOrden)
+    if trigger['status'] ==True:
+       respuesta= trigger['response']
+       return respuesta
+    else:
+       raise HTTPException(400,trigger['mesagge'])
+    

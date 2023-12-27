@@ -299,7 +299,7 @@ where c.id=o.idcliente and o.sede='{sede}' and o.status = 'por pagar'  order  by
               with self.conn.cursor() as cur :
                   
                     cur.execute(f"""delete from pedidos where idorden='{idOrden}';
-                       delete from ordenes where idorden='{idOrden}';""");
+                       delete from ordenes where id='{idOrden}';""");
               
                     self.conn.commit()    
         

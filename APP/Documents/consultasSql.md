@@ -55,4 +55,17 @@ AND EXTRACT(YEAR FROM fechapago) = EXTRACT(YEAR FROM CURRENT_DATE);
 ```sql select o.fechaPedido,i.nombre ,p.cantidad,i.precio,p.total from pedidos p 
 inner join productos i on i.precio=i.precio and i.nombre=i.nombre
 inner join ordenes o on o.fechapedido =o.fechapedido 
-where o.id = '1699107240' and i.id=p.idproducto and p.idorden ='1699107240' ```
+where o.id = '1699107240' and i.id=p.idproducto and p.idorden ='1699107240'
+``` 
+8. eliminar ordenes 
+``` sql 
+delete from pedidos where idorden='{idOrden}';
+
+delete from ordenes where id='{idOrden}'
+```
+9. ordenes detalladas entity
+```sql
+                        select o.id,c.nombre,total,date(o.fechapedido) as fecha , to_char(o.fechapedido ,'hh12:MI:SS AM') as hora  , o.status from ordenes o
+inner join clientes c on c.nombre =c.nombre
+where c.id=o.idcliente and o.sede='{sede}' and o.status = 'por pagar'  order  by o.fechapedido desc 
+```

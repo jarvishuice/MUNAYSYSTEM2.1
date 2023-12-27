@@ -2,9 +2,10 @@
 import Box from '@mui/material/Box';
 import { DataGrid, GridColDef, GridToolbarContainer, GridToolbarExport, } from '@mui/x-data-grid';
 import { useEffect, useState } from 'react';
-import { Button } from '@mui/joy';
+import { IconButton } from '@mui/joy';
 import { OrdenesDAO } from '../../core/Implements/Ordenes/ordenesDAO';
 import { OrdenesDetalladasEntity } from '../../core/Entities/ordenes/ordenesEntity';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 const sede = localStorage.getItem("sede")??"inicie seccion";
 function CustomToolbar() {
     return (
@@ -14,12 +15,24 @@ function CustomToolbar() {
     );
   }
 
-  function mostrarCElda(params:any){
-    const data= JSON.stringify(params.row);
-    alert(data);
+ 
+
+async function deleteORder(idOrder:string){
+  try {
+    const ControladorOrdenes = new OrdenesDAO();
+    const data = await ControladorOrdenes.deleteOrden(idOrder);
+    alert(`Orden #${idOrder} eliminada: ${data}`);
+    window.location.reload()
+  } catch (error) {
+   alert(error);
   }
+}
+function mostrarCElda(params:any){
+
+  deleteORder(JSON.stringify(params.row.idOrden).replace(/['"]+/g, ''));
 
 
+}
 
 const columns: GridColDef[] = [
   {
@@ -66,12 +79,14 @@ const columns: GridColDef[] = [
   },
   {
     field: 'convertir',
-    headerName: 'Convertir ',
+    headerName: 'Eliminar ',
  
     width: 110,
     editable: false,
     renderCell:(params)=>(
-      <Button color="primary"  variant="solid" size="sm" onClick={()=>mostrarCElda(params)}> Convertir </Button>
+    <IconButton size={"lg"} color="danger" onClick={()=>mostrarCElda(params)}> 
+  <DeleteForeverIcon /> 
+   </IconButton>
     )
   },
   
@@ -80,12 +95,7 @@ const columns: GridColDef[] = [
 
 
 export  function OrdenesTable() {
-   /**
-   * Initializes a state variable called `visitas` using the `useState` hook.
-   * Defines an asynchronous function called `fecthVisita` that fetches data from an API using an instance of the `VisitasDAO` class.
-   * The fetched data is then set to the `visitas` state variable using the `setVisitas` function.
-   * The `fecthVisita` function is called once when the component mounts using the `useEffect` hook.
-   */
+   
   const[ordenes,setOrdenes]=useState<OrdenesDetalladasEntity[]|[]> ([])
   
     /**

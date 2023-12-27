@@ -159,4 +159,38 @@ export class OrdenesDAO implements IOrdenes {
             return [];
         }
     }
+     async deleteOrden(idOrden: string): Promise<boolean> {
+        try {
+            const response = await fetch(`${this.API}${this.prefijo}/delete/${idOrden}`, {
+                method: 'PUT',
+                headers: this.headers,
+              
+            });
+            if (response.ok) {
+                const data = await response.json();
+                console.log(data);
+                
+                return data ;
+            } else if (response.status == 404) {
+                alert("No se ha podido conectar con el servidor ");
+                return false;
+            } else if (response.status == 400) {
+                alert(response.statusText);
+                return false;
+            } else if (response.status == 422) {
+                alert("unprocesable entity");
+                return false;
+            }if(response.status == 401){
+                localStorage.clear()
+                window.location.href="/index.html"
+                return false;
+              }
+             else {
+                throw new Error('Error en la solicitud');
+            }
+        } catch (error) {
+            console.error(error);
+            return false;
+        }
+    }
 }
