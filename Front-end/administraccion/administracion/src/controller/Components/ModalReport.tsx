@@ -5,9 +5,16 @@ import ModalClose from '@mui/joy/ModalClose';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import Sheet from '@mui/joy/Sheet';
 import { IconButton } from '@mui/joy';
+import { PATHMUNAYSYSY } from '../../Config/routes/pathsMuanaysys';
+const sede= localStorage.getItem('sede')??"InicieSeccion";
+const paths =  new PATHMUNAYSYSY()
+const API=  paths.PathAPI()
+const prefijo='Reports'
 
+const PreCierre=`${API}${prefijo}/coffeshop/precierre/${sede}`
+const Cierre=`${API}${prefijo}/coffeshop/cierre/${sede}`
 
-export default function BasicModal() {
+export  function ModalReports() {
   const [open, setOpen] = React.useState<boolean>(false);
   return (
     <React.Fragment>
@@ -31,7 +38,9 @@ export default function BasicModal() {
           }}
         >
           <ModalClose variant="plain" sx={{ m: 1 }} />
-         <Button href=''> Reprote Preciere</Button>
+          <br />
+         <Button onClick={()=>window.location.href=`${PreCierre}`}> Reporte Preciere</Button>
+         <Button onClick={()=>window.location.href=`${Cierre}`}> Cierre de Jornada</Button>
 
         </Sheet>
       </Modal>
