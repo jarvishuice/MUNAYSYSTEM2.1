@@ -60,9 +60,9 @@ export  function CardReportByfecha() {
         
       }}
     >
-      <Card size="lg"  variant="outlined">
+      <Card size="lg"  sx={{backgroundColor: 'background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)'}} variant="outlined">
         <Chip size="sm" variant="outlined" color="neutral">
-          BASIC
+      
         </Chip>
         <Typography level="h3">Reporte de cierre de jornada Historicos</Typography>
         <Divider inset="none" />
@@ -108,7 +108,7 @@ export  function CardReportByfecha() {
           </Typography>
           <Button
             variant="soft"
-            color="neutral"
+            color="primary"
             endDecorator={<KeyboardArrowRight />}
             onClick={()=>buildReport(ano,mes,dia)}
           >

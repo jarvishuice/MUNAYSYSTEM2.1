@@ -21,7 +21,7 @@ export  function ModalReports() {
     <React.Fragment>
       <IconButton variant="outlined" color="neutral" onClick={() => setOpen(true)}>
         Reportes
-        <AssessmentIcon> Report</AssessmentIcon>
+        <AssessmentIcon> </AssessmentIcon>
       </IconButton>
       <Modal
         aria-labelledby="modal-title"
