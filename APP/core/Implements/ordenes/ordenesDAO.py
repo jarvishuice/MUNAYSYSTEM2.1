@@ -247,4 +247,48 @@ where o.id = '{idOrden}' and i.id=p.idproducto and p.idorden ='{idOrden}'
             return ResponseInternal.responseInternal(False,"ERROR EN LA BASE DE DATOS",None)
         finally:
             Logs.WirterTask("Finalizada la ejecucion de registros de productos ")
-            self.disconnect()        
+            self.disconnect()
+    def getOrdenesBysede(self,sede: str) -> list[OrdenesDetalladasEntity | None]:
+        data=[]
+        try:
+            conexion=self.connect()
+       
+            if conexion['status'] == True:
+              with self.conn.cursor() as cur :
+                  
+                    cur.execute(f"""
+                        select o.id,c.nombre,total,date(o.fechapedido) as fecha , to_char(o.fechapedido ,'hh12:MI:SS AM') as hora  , o.status from ordenes o
+inner join clientes c on c.nombre =c.nombre
+where c.id=o.idcliente and o.sede='{sede}'  order  by o.fechapedido desc 
+                                """);
+              
+             
+        
+                    count= cur.rowcount
+                    if count > 0 :
+                        for i in cur :
+                         data.append(OrdenesDetalladasEntity(idOrden=str(i[0]),
+                                                  cliente=str(i[1]),
+                                                  total=float(i[2]),
+                                                  fecha=str(i[3]),
+                                                  hora=str(i[4]),
+                                                  status=str(i[5])
+                                                  
+                                                 ))     
+                        return  ResponseInternal.responseInternal(True,f"ordenes de la sede {sede} extraida con exito ",data)
+                    else:
+                        Logs.WirterTask(f"{self.NOTE } se leyeron las ordnes pero on encontramos ninguna  ")
+                        return ResponseInternal.responseInternal(True, "{self.NOTE} Las ordnes se leyeron de manera correctapero no conseguimos nada ...  ",data)
+            else:
+                   return ResponseInternal.responseInternal(False,"ERROR DE CONEXION A LA BASE DE DATOS...",None)
+        
+        except self.INTERFACE_ERROR as e :
+            Logs.WirterTask(f"{self.ERROR} error de interface {e}")
+            return ResponseInternal.responseInternal(False,"ERROR de interface en la base de datos ",None)
+        except self.DATABASE_ERROR as e:
+            Logs.WirterTask(f"{self.ERROR} error en la base de datos detail{e}")
+            return ResponseInternal.responseInternal(False,"ERROR EN LA BASE DE DATOS",None)
+        finally:
+            Logs.WirterTask("Finalida la lectura de las ordenes de la sede {sede}")
+            self.disconnect() 
+                    

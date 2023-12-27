@@ -69,3 +69,11 @@ async def DEtalleOrdenesById(idOrden:str):
        return respuesta
     else:
        raise HTTPException(400,trigger['mesagge'])
+@Ordenes.post("/filter/sede/{sede}")
+async def getOrdenesBysede(sede)->list[OrdenesDetalladasEntity]:
+   trigger=core.getOrdenesBysede(sede)
+   if trigger['status'] ==True:
+       respuesta= trigger['response']
+       return respuesta
+   else:
+       raise HTTPException(400,trigger['mesagge'])

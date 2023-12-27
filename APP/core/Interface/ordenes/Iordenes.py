@@ -1,4 +1,4 @@
-from core.Entities.ordenes.ordenesEntity import OrdenesEntity
+from core.Entities.ordenes.ordenesEntity import OrdenesEntity,OrdenesDetalladasEntity
 from core.Entities.ordenes.detalleOrdenEntity import OrdenDetalladaEntity,DetalleOrdenesEntity
 
 from core.Entities.clientes.deudaClienteCoffeShopEntitity import DetalleDedudaClientesEntity
@@ -29,4 +29,9 @@ class IOrdenes(ABC):
     @abstractmethod 
     def getDetailOrden(idOrden:str)->list[OrdenDetalladaEntity]:
         pass
-    
+    """_summary_
+    #{metodo que returna todos las pordenes de una sedes}
+    """
+    @abstractmethod 
+    def getOrdenesBysede(sede:str)->list[OrdenesDetalladasEntity|None]:
+        pass
