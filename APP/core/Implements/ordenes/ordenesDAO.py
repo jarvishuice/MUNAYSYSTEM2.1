@@ -291,6 +291,34 @@ where c.id=o.idcliente and o.sede='{sede}' and o.status = 'por pagar'  order  by
         finally:
             Logs.WirterTask("Finalida la lectura de las ordenes de la sede {sede}")
             self.disconnect() 
-    def deleteOrder(idOrder: str) -> bool:
-        return True
-                    
+    def deleteOrder(self,idOrden: str) -> bool:
+        try:
+            conexion=self.connect()
+       
+            if conexion['status'] == True:
+              with self.conn.cursor() as cur :
+                  
+                    cur.execute(f"""delete from pedidos where idorden='{idOrden}';
+                       delete from ordenes where idorden='{idOrden}';""");
+              
+                    self.conn.commit()    
+        
+                    count= cur.rowcount
+                    if count > 0 :
+                          
+                        return  ResponseInternal.responseInternal(True,f"la orden {idOrden}  fue eliminada con exito",True)
+                    else:
+                        Logs.WirterTask(f"{self.NOTE } se leyeron las ordnes pero on encontramos ninguna  ")
+                        return ResponseInternal.responseInternal(True, "{self.NOTE} No se pudo eliminrar la orden {idOrden} probablkemente no exite ...  ",True)
+            else:
+                   return ResponseInternal.responseInternal(False,"ERROR DE CONEXION A LA BASE DE DATOS...",None)
+        
+        except self.INTERFACE_ERROR as e :
+            Logs.WirterTask(f"{self.ERROR} error de interface {e}")
+            return ResponseInternal.responseInternal(False,"ERROR de interface en la base de datos ",None)
+        except self.DATABASE_ERROR as e:
+            Logs.WirterTask(f"{self.ERROR} error en la base de datos detail{e}")
+            return ResponseInternal.responseInternal(False,"ERROR EN LA BASE DE DATOS",None)
+        finally:
+            Logs.WirterTask("Finalida la lectura de las ordenes de la sede {sede}")
+            self.disconnect()                     

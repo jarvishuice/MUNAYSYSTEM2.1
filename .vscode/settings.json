@@ -1,3 +1,13 @@
 {
-    "livePreview.defaultPreviewPath": "/Front-end/Recepcion/Recepcion/dist/MUNAY2.1.html"
+    "livePreview.defaultPreviewPath": "/Front-end/Recepcion/Recepcion/dist/MUNAY2.1.html",
+    "draw.folder.structure.exclude": [
+
+        "node_modules",
+        ".git",
+        "dist",
+        ".next",
+        "out",
+        ".pyc",
+        "venv"
+    ]
 }
