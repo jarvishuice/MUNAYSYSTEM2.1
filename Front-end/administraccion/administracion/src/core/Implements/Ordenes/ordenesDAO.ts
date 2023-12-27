@@ -127,7 +127,7 @@ export class OrdenesDAO implements IOrdenes {
     }
      async getOrdenesBySede(sede: string): Promise<OrdenesDetalladasEntity[] | []> {
         try {
-            const response = await fetch(`${this.API}${this.prefijo}/filter/${sede}`, {
+            const response = await fetch(`${this.API}${this.prefijo}/filter/sede/${sede}`, {
                 method: 'POST',
                 headers: this.headers,
               

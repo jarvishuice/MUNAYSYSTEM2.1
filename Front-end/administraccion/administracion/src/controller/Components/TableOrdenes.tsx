@@ -14,19 +14,18 @@ function CustomToolbar() {
     );
   }
 
+  function mostrarCElda(params:any){
+    const data= JSON.stringify(params.row);
+    alert(data);
+  }
 
-/**
- * Triggers the conversion of visitor information when a button is clicked.
- * Retrieves data from the clicked row in a table and passes it to the `convertirVisitante` function.
- * @param params - An object containing the data of the clicked row in the table.
- * @returns A Promise that resolves to a `ClientesEntity` object or `null`.
- */
+
 
 const columns: GridColDef[] = [
   {
     field: 'idOrden',
     headerName: 'Id',
-    width: 10,
+    width: 250,
     editable: false,
   },
   {
@@ -72,7 +71,7 @@ const columns: GridColDef[] = [
     width: 110,
     editable: false,
     renderCell:(params)=>(
-      <Button color="primary"  variant="solid" size="sm" onClick={()=>alert(params)}> Convertir </Button>
+      <Button color="primary"  variant="solid" size="sm" onClick={()=>mostrarCElda(params)}> Convertir </Button>
     )
   },
   
@@ -114,7 +113,7 @@ const rows = ordenes;
   return (
     <Box sx={{ height: "100vh", width: '100%' }}>
       <DataGrid
-
+    getRowId={(row)=>row.idOrden}
   slots={{
     toolbar: CustomToolbar,
   }}

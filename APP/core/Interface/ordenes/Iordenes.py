@@ -35,3 +35,6 @@ class IOrdenes(ABC):
     @abstractmethod 
     def getOrdenesBysede(sede:str)->list[OrdenesDetalladasEntity|None]:
         pass
+    @abstractmethod 
+    def deleteOrder(idOrder:str)->bool:
+        pass

@@ -35,7 +35,7 @@ export function Navegacion(props:any){
   </IconButton>
   
   <img className="SIDEBARLOGO"  style={{'width':'5rem'}}  src={logoNest}/>
-  <div className="nest"><AddLocationAltIcon/> Nest {sede} </div>
+  <div className="nest"><AddLocationAltIcon/>  {sede} </div>
   <Drawer  size='sm'    open={open} onClose={() => setOpen(false)}>
     <Box
       sx={{

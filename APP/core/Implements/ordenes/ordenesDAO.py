@@ -259,7 +259,7 @@ where o.id = '{idOrden}' and i.id=p.idproducto and p.idorden ='{idOrden}'
                     cur.execute(f"""
                         select o.id,c.nombre,total,date(o.fechapedido) as fecha , to_char(o.fechapedido ,'hh12:MI:SS AM') as hora  , o.status from ordenes o
 inner join clientes c on c.nombre =c.nombre
-where c.id=o.idcliente and o.sede='{sede}'  order  by o.fechapedido desc 
+where c.id=o.idcliente and o.sede='{sede}' and o.status = 'por pagar'  order  by o.fechapedido desc 
                                 """);
               
              
@@ -291,4 +291,6 @@ where c.id=o.idcliente and o.sede='{sede}'  order  by o.fechapedido desc
         finally:
             Logs.WirterTask("Finalida la lectura de las ordenes de la sede {sede}")
             self.disconnect() 
+    def deleteOrder(idOrder: str) -> bool:
+        return True
                     
