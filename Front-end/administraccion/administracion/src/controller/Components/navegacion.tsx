@@ -81,7 +81,7 @@ export function Navegacion(props:any){
       <ListItemButton onClick={()=> props.setComponente(<OrdenesCompleto/>)} >{<ReceiptIcon/>}Ordenes</ListItemButton>
       <ListItemButton onClick={()=> props.setComponente(<ClientesMaster/>)} >{<GroupIcon/>}Clientes</ListItemButton>
       <ListItemButton onClick={()=> props.setComponente(<Visitantes/>)} >{<HowToRegIcon/>}Visitantes</ListItemButton>
-      <ListItemButton > <ModalReports></ModalReports>  Reportes   </ListItemButton>
+      <ListItemButton > <ModalReports></ModalReports>     </ListItemButton>
       <ListItemButton>{<LogoutIcon/>}Salir</ListItemButton>
     </List>
   </Drawer>

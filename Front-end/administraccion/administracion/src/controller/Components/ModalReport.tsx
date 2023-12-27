@@ -6,6 +6,7 @@ import AssessmentIcon from '@mui/icons-material/Assessment';
 import Sheet from '@mui/joy/Sheet';
 import { IconButton } from '@mui/joy';
 import { PATHMUNAYSYSY } from '../../Config/routes/pathsMuanaysys';
+import { CardReportByfecha } from './cardREportByfecha';
 const sede= localStorage.getItem('sede')??"InicieSeccion";
 const paths =  new PATHMUNAYSYSY()
 const API=  paths.PathAPI()
@@ -19,6 +20,7 @@ export  function ModalReports() {
   return (
     <React.Fragment>
       <IconButton variant="outlined" color="neutral" onClick={() => setOpen(true)}>
+        Reportes
         <AssessmentIcon> Report</AssessmentIcon>
       </IconButton>
       <Modal
@@ -28,7 +30,7 @@ export  function ModalReports() {
         onClose={() => setOpen(false)}
         sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
       >
-        <Sheet
+        <Sheet 
           variant="outlined"
           sx={{
             maxWidth: 500,
@@ -41,7 +43,8 @@ export  function ModalReports() {
           <br />
          <Button onClick={()=>window.location.href=`${PreCierre}`}> Reporte Preciere</Button>
          <Button onClick={()=>window.location.href=`${Cierre}`}> Cierre de Jornada</Button>
-
+         <br />
+         <CardReportByfecha></CardReportByfecha>
         </Sheet>
       </Modal>
     </React.Fragment>
