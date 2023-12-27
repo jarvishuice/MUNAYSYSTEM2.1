@@ -7,6 +7,7 @@ import Tab from '@mui/joy/Tab';
 import TabPanel from '@mui/joy/TabPanel';
 import { Ordenes } from "../controller/Components/ORDENES";
 import { CarritoOrdenes } from "../controller/Components/CarritoOrdenes";
+import { OrdenesTable } from "../controller/Components/TableOrdenes";
 
 export function OrdenesCompleto(){
   return (
@@ -21,7 +22,7 @@ export function OrdenesCompleto(){
  <ORDENES></ORDENES>
 </TabPanel>
 <TabPanel value={1}>
-<h1>g</h1>
+<OrdenesTable/>
 </TabPanel>
 </Tabs>
   )

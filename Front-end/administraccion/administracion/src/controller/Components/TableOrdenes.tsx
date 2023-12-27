@@ -3,9 +3,6 @@ import Box from '@mui/material/Box';
 import { DataGrid, GridColDef, GridToolbarContainer, GridToolbarExport, } from '@mui/x-data-grid';
 import { useEffect, useState } from 'react';
 import { Button } from '@mui/joy';
-import { VisitantesDAO } from '../../core/Implements/visitantes/visitantesDAO';
-import { ClientesEntity } from '../../core/Entities/clients/clients';
-import { ClientesDAO } from '../../core/Implements/clients/clientesDAO';
 import { OrdenesDAO } from '../../core/Implements/Ordenes/ordenesDAO';
 import { OrdenesDetalladasEntity } from '../../core/Entities/ordenes/ordenesEntity';
 const sede = localStorage.getItem("sede")??"inicie seccion";
@@ -27,29 +24,20 @@ function CustomToolbar() {
 
 const columns: GridColDef[] = [
   {
-    field: 'id',
+    field: 'idOrden',
     headerName: 'Id',
     width: 10,
     editable: false,
   },
   {
-    field: 'nombre',
+    field: 'cliente',
     headerName: 'Nombre',
     width: 150,
     editable: false,
   },
-
   {
-    field: 'apellido',
-    headerName: 'Apellido',
-   
-    width: 10,
-    editable: false,
-    
-  },
-  {
-    field: 'correo',
-    headerName: 'Correo',
+    field: 'total',
+    headerName: 'Total',
    
     width: 100,
     editable: false,
@@ -57,37 +45,24 @@ const columns: GridColDef[] = [
   },
 
   {
-    field: 'tlf',
-    headerName: 'TLF',
+    field: 'fecha',
+    headerName: 'Fecha de apertura',
    
     width: 100,
     editable: false,
     
   },
-  {  field: 'fechaingreso',
-  headerName: ' Ingreso',
+  {  field: 'hora',
+  headerName: ' Hora',
 
   width: 150,
   editable: false,
   },
   {
-    field: 'ci',
-    headerName: 'CI /Rif',
+    field: 'status',
+    headerName: 'Estado',
  
     width: 100,
-    editable: false,
-  },
-  {  field: 'status',
-  headerName: ' Estado',
- 
-  width: 110,
-  editable: false,
-
-  },{
-    field: 'direccion',
-    headerName: ' Direccion',
-
-    width: 110,
     editable: false,
   },
   {
@@ -112,7 +87,7 @@ export  function OrdenesTable() {
    * The fetched data is then set to the `visitas` state variable using the `setVisitas` function.
    * The `fecthVisita` function is called once when the component mounts using the `useEffect` hook.
    */
-  const[visitante,setVisitantes]=useState<OrdenesDetalladasEntity[]|null> ([])
+  const[ordenes,setOrdenes]=useState<OrdenesDetalladasEntity[]|[]> ([])
   
     /**
    * Fetches data from an API using an instance of the @class`VisitasDAO`  
@@ -125,7 +100,7 @@ export  function OrdenesTable() {
     try {
         const ControladorOrdenes = new OrdenesDAO();
         const data = await ControladorOrdenes.getOrdenesBySede(sede);
-        setVisitantes(data);
+        setOrdenes(data);
       } catch (error) {
         console.error(error);
       }
@@ -134,7 +109,7 @@ useEffect(() => {
   fecthOrdenes();
 }, []);
 
-const rows = visitante
+const rows = ordenes;
 
   return (
     <Box sx={{ height: "100vh", width: '100%' }}>
@@ -148,11 +123,11 @@ rows={rows}
         initialState={{
           pagination: {
             paginationModel: {
-              pageSize: 10,
+              pageSize: 30,
             },
           },
         }}
-        pageSizeOptions={[7]}
+        pageSizeOptions={[30]}
      
         disableRowSelectionOnClick
       />
