@@ -13,7 +13,7 @@ class PedidosEspaciosDAO(PedidosDAO,IPedidos):
     @override
     def crearPedido(self, pedido: PedidosEntity) -> PedidosEntity:
         """
-        Creates a new  main order in the database.
+        Creates a new  main the  order in the database.
 
         Args:
             pedido (PedidosEntity): An instance of the PedidosEntity class representing the order to be created.
