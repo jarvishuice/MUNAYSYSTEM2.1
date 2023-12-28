@@ -22,6 +22,7 @@ from controllers.api.router.reports.coffeshop.cierreROUTERByFECHA import ReportC
 from controllers.api.router.metrics.metricsRouter import Metric
 from controllers.api.router.visitas.visitantesRouter import Visitantes
 from controllers.api.router.visitas.visitasRouter import Visitas
+from controllers.api.router.espacios.espaciosRouter import espacios
 origins = ["*"]
 autenticacion=OAuth2PasswordBearer(tokenUrl="token")
 
@@ -35,6 +36,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+app.include_router(espacios)
 app.include_router(Visitantes)
 app.include_router(Visitas)
 app.include_router(Ordenes)
