@@ -3,12 +3,14 @@ from core.Interface.pedidos.Ipedidos import IPedidos
 from core.config.ResponseInternal import ResponseInternal
 from config.Db.conectionsPsqlInterface import ConectionsPsqlInterface
 from core.test.pedidosDataTest.pedidosValidationData import validationPedidosData
+
 import time
 from config.Logs.LogsActivity import Logs
 class PedidosDAO(ConectionsPsqlInterface,IPedidos):
     validacion=validationPedidosData()
     def __init__(self):
         super().__init__()
+    
     
     def crearPedido(self,pedido: PedidosEntity,sede:str) -> PedidosEntity:
         try:
