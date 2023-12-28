@@ -75,7 +75,7 @@ class PedidosEspaciosDAO(PedidosDAO,IPedidos):
             response = []
             if validation == True:
                 for i in pedidos:
-                    creacion = self.crearPedido(i, sede)
+                    creacion = self.crearPedido(i)
                     if creacion['status'] == False:
                         return ResponseInternal.responseInternal(False, creacion['mesagge'], None)
                     else:

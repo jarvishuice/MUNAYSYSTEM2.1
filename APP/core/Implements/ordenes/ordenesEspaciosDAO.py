@@ -263,7 +263,7 @@ order by o.id desc
             self.disconnect()
    
     @override
-    def getDetailOrden(self,idOrden: str) -> list[OrdenDetalladaEntity]:
+    def getDetailOrden(self,idOrden:str) -> list[OrdenDetalladaEntity]:
         data=[]
         try:
             conexion=self.connect()
