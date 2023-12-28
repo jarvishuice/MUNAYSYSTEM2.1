@@ -1,7 +1,7 @@
 
 import datetime
-from APP.core.Entities.ordenes.ordenesEntity import OrdenesEntity
-from APP.core.Implements.ordenes.ordenesDAO import OrdenesDao
+from core.Entities.ordenes.ordenesEntity import OrdenesEntity
+from core.Implements.ordenes.ordenesDAO import OrdenesDao
 from core.Entities.clientes.deudaClienteCoffeShopEntitity import DetalleDedudaClientesEntity
 from core.Entities.ordenes.ordenesEntity import OrdenesEntity,OrdenesDetalladasEntity
 from core.Entities.ordenes.detalleOrdenEntity import OrdenDetalladaEntity
@@ -17,7 +17,7 @@ from core.Implements.wallet.walletDAO import WalletDAO
 from core.Implements.pagos.pagosWalletDAO import PagosWalletDAO
 from config.Logs.LogsActivity import Logs
 from config.helpers.override import override
-class OrdenesEspaciosDAO(IOrdenes):
+class OrdenesEspaciosDAO(IOrdenes,ConectionsPsqlInterface):
     validacion=validationOrdenesData()
     pedidos=PedidosEspaciosDAO()
     walletDao=WalletDAO()
