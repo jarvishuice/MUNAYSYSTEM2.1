@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { ProductosEntity } from "../core/Entities/productos/productos";
-import { Carrito } from "../controller/Components/carrito";
 import BusquedaProductoEspacios from "../controller/Components/busquedaProductosEspacios";
 import { BotoneraCategoriaEspacios } from "../controller/Components/botoneraCategoriaEspacios";
 import { ProductosEspacios } from "../controller/Components/productosEspacios";
-
+import { CarritoEspacios } from "../controller/Components/carritoEspacios";
 
 export function POSESPACIOS(){
   
@@ -93,7 +92,7 @@ return(<>
 
             </center>
             <ProductosEspacios categoria={categoria} insertarPedido={insertarPedidos}></ProductosEspacios>
-            <div className=" mt-4 col-sm-2 col-md-4 col-lg-4 order-md-reverse"><Carrito pedido={pedidos} aumento={incrementoProducto} descremento={descremento}></Carrito> </div>
+            <div className=" mt-4 col-sm-2 col-md-4 col-lg-4 order-md-reverse"><CarritoEspacios pedido={pedidos} aumento={incrementoProducto} descremento={descremento}></CarritoEspacios> </div>
         
             </div>
           

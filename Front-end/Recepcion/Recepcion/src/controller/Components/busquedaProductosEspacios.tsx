@@ -7,7 +7,7 @@ const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
   };
 
-    const [nombre, setNombre] = useState("cafe");
+    const [nombre, setNombre] = useState("da");
 const buscarProducto = (valor: string | any) => {
     setNombre(valor);
   };
