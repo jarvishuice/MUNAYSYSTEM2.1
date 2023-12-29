@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ProductosEntity } from "../../core/Entities/productos/productos";
 import { ProductosEspaciosDAO } from "../../core/Implements/productos/productosEspaciosDAO";
-export function BusquedaProducto(props:any){
+export function BusquedaProductoEspacios(props:any){
 const [inputValue,setInputValue] =useState<String|any>("")
 const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
@@ -60,4 +60,4 @@ console.log("no se encontraron productos")
 
 
 }
-export default BusquedaProducto;
+export default BusquedaProductoEspacios;

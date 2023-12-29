@@ -1,9 +1,10 @@
-import {  useState } from "react";
-import { BotoneraCategoria } from "../controller/Components/botoneraCategoria";
-import BusquedaProducto from "../controller/Components/busquedaProductos";
+import { useState } from "react";
 import { Productos } from "../controller/Components/productos";
 import { ProductosEntity } from "../core/Entities/productos/productos";
 import { Carrito } from "../controller/Components/carrito";
+import BusquedaProductoEspacios from "../controller/Components/busquedaProductosEspacios";
+import { BotoneraCategoriaEspacios } from "../controller/Components/botoneraCategoriaEspacios";
+import { ProductosEspacios } from "../controller/Components/productosEspacios";
 
 
 export function POS(){
@@ -85,14 +86,14 @@ return(<>
           
             <center><div className="col-md-7 col-lg-8  ">
             <div className=" ">
-                <BusquedaProducto insertProduct={incrementoProducto}  ></BusquedaProducto></div>
+                <BusquedaProductoEspacios insertProduct={incrementoProducto}  ></BusquedaProductoEspacios></div>
                 
             
-            <BotoneraCategoria  Categoria={selecionarCaytegoria} ></BotoneraCategoria></div>
+            <BotoneraCategoriaEspacios  Categoria={selecionarCaytegoria} ></BotoneraCategoriaEspacios></div>
              
 
             </center>
-            <Productos categoria={categoria} insertarPedido={insertarPedidos}></Productos>
+            <ProductosEspacios categoria={categoria} insertarPedido={insertarPedidos}></ProductosEspacios>
             <div className=" mt-4 col-sm-2 col-md-4 col-lg-4 order-md-reverse"><Carrito pedido={pedidos} aumento={incrementoProducto} descremento={descremento}></Carrito> </div>
         
             </div>
