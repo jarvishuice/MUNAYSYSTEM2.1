@@ -14,7 +14,21 @@ class ProductosEspaciosDAO(IProductos,ConectionsPsqlInterface,):
         return super().registrarProducto()
     @override
     def registrarProducto(self,productoData: ProductosEntity) -> ProductosEntity:
-        
+        """
+        Este método registra un nuevo producto en la base de datos.
+
+        Parámetros:
+            productoData (ProductosEntity): La entidad del producto que se va a registrar.
+
+        Retorna:
+            @->ProductosEntity: La entidad del producto registrado.
+
+        Excepciones:
+            INTEGRIDAD_ERROR: Se lanza cuando hay un error de integridad en la base de datos.
+            INTERFACE_ERROR: Se lanza cuando hay un error de interfaz en la base de datos.
+            DATABASE_ERROR: Se lanza cuando hay un error en la base de datos.
+
+        """
         try:
             conexion=self.connect()
        
