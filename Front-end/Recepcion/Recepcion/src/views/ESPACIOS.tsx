@@ -1,4 +1,5 @@
 import { Tabs, TabList, Tab, TabPanel } from "@mui/joy";
+import { POSESPACIOS } from "./POS_ESPACIOS";
 
 export function ESPACIOS(){
 return(<Tabs aria-label="Basic tabs" defaultValue={0}>
@@ -9,7 +10,7 @@ return(<Tabs aria-label="Basic tabs" defaultValue={0}>
   <Tab>Visitantes</Tab>
 </TabList>
 <TabPanel value={0}>
-
+<POSESPACIOS></POSESPACIOS>
 </TabPanel>
 <TabPanel value={1}>
 <h1></h1>

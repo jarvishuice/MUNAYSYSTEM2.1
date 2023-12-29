@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Productos } from "../controller/Components/productos";
 import { ProductosEntity } from "../core/Entities/productos/productos";
 import { Carrito } from "../controller/Components/carrito";
 import BusquedaProductoEspacios from "../controller/Components/busquedaProductosEspacios";
@@ -7,7 +6,7 @@ import { BotoneraCategoriaEspacios } from "../controller/Components/botoneraCate
 import { ProductosEspacios } from "../controller/Components/productosEspacios";
 
 
-export function POS(){
+export function POSESPACIOS(){
   
 
   //estado para la gestipon de cattegorias
