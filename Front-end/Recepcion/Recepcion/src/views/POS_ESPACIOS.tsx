@@ -10,7 +10,7 @@ export function POSESPACIOS(){
   
 
   //estado para la gestipon de cattegorias
-  const [categoria,setCategoria]=useState<string>("cafe")
+  const [categoria,setCategoria]=useState<string>("oficinas")
 
 
 
