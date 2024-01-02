@@ -2,14 +2,14 @@
 import { useEffect, useState } from 'react';
 
 import { DetalleDeudaCliente, DeudaClientesEntity } from '../../core/Entities/clients/dedudaClientes';
-import { DeudasClientesDAO } from '../../core/Implements/clients/deudasClientesDAO';
+
 export function OrdenesEspacios(props:any){
   const sede = localStorage.getItem('sede') ?? 'por favor inicie sesión para poder crear una orden';
 const [deudas,setDeudas]= useState<DeudaClientesEntity[]>([]);
 
 async function fecthDeuda() {
       try {
-          const ControladorDeudas = new DeudasClientesDAO();
+          const ControladorDeudas = new DeudaClientesEspaciosDAO();
           const data = await ControladorDeudas.DeudasClientesBysede(localStorage.getItem('sede'));
           setDeudas(data);
         } catch (error) {

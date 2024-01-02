@@ -3,7 +3,7 @@ import { DetalleDeudaCliente, DeudaClientesEntity } from "../../Entities/clients
 import { PagosEntity } from "../../Entities/pagos/pagosEntity";
 import { IDeudasCLientes } from "../../Interfaces/Clients/IdeudaClientes";
 
-export class DeudasClientesDAO implements IDeudasCLientes{
+export class DeudasClientesEspaciosDAO implements IDeudasCLientes{
     private paths =  new PATHMUNAYSYSY()
     private API=  this.paths.PathAPI()
     private prefijo='Espacios'
