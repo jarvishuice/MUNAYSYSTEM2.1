@@ -18,7 +18,7 @@ export class DeudasClientesEspaciosDAO implements IDeudasCLientes{
         console.log("nueva instancia de clientes ")
         this.paths= new PATHMUNAYSYSY()
         
-    }
+    } 
     
    async  DeudasClientesBysede(sede: string|null): Promise<DeudaClientesEntity[]> {
 

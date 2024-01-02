@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 
 import { DetalleDeudaCliente, DeudaClientesEntity } from '../../core/Entities/clients/dedudaClientes';
+import { DeudasClientesEspaciosDAO } from '../../core/Implements/clients/deudasClientesEspaciosDAO';
 
 export function OrdenesEspacios(props:any){
   const sede = localStorage.getItem('sede') ?? 'por favor inicie sesión para poder crear una orden';
@@ -9,7 +10,7 @@ const [deudas,setDeudas]= useState<DeudaClientesEntity[]>([]);
 
 async function fecthDeuda() {
       try {
-          const ControladorDeudas = new DeudaClientesEspaciosDAO();
+          const ControladorDeudas = new DeudasClientesEspaciosDAO();
           const data = await ControladorDeudas.DeudasClientesBysede(localStorage.getItem('sede'));
           setDeudas(data);
         } catch (error) {
@@ -30,7 +31,7 @@ const [detalles,setDetalles]=useState<DetalleDeudaCliente[]>([{fechaPedido:" ",p
 
 async function DETALLESDEUDAS(idCliente:number) {
   try {
-    const controladorDeudas = new DeudasClientesDAO();
+    const controladorDeudas = new DeudasClientesEspaciosDAO();
     const data = await controladorDeudas.DetalleDeudaClientes(sede, idCliente);
     setDetalles(data);
     trigger(true)
