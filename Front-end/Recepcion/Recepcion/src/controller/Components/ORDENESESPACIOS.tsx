@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 
 import { DetalleDeudaCliente, DeudaClientesEntity } from '../../core/Entities/clients/dedudaClientes';
 import { DeudasClientesEspaciosDAO } from '../../core/Implements/clients/deudasClientesEspaciosDAO';
-
 export function OrdenesEspacios(props:any){
   const sede = localStorage.getItem('sede') ?? 'por favor inicie sesión para poder crear una orden';
 const [deudas,setDeudas]= useState<DeudaClientesEntity[]>([]);
