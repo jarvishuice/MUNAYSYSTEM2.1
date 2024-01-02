@@ -7,8 +7,7 @@ return(<Tabs aria-label="Basic tabs" defaultValue={0}>
 <TabList>
   <Tab>POS</Tab>
   <Tab>ORDENES</Tab>
-  <Tab>Registrar Visitante</Tab>
-  <Tab>Visitantes</Tab>
+
 </TabList>
 <TabPanel value={0}>
 <POSESPACIOS></POSESPACIOS>
