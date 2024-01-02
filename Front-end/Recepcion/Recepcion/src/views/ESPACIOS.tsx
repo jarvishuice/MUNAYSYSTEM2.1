@@ -1,6 +1,6 @@
 import { Tabs, TabList, Tab, TabPanel } from "@mui/joy";
 import { POSESPACIOS } from "./POS_ESPACIOS";
-import { OrdenesEspacios } from "../controller/Components/ORDENESESPACIOS";
+import { ORDENESESPACIOS } from "./OrdenesEspacios";
 
 export function ESPACIOS(){
 return(<Tabs aria-label="Basic tabs" defaultValue={0}>
@@ -14,7 +14,7 @@ return(<Tabs aria-label="Basic tabs" defaultValue={0}>
 <POSESPACIOS></POSESPACIOS>
 </TabPanel>
 <TabPanel value={1}>
-<OrdenesEspacios></OrdenesEspacios>
+<ORDENESESPACIOS></ORDENESESPACIOS>
 </TabPanel>
 
 </Tabs>)
