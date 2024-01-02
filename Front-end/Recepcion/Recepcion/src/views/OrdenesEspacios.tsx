@@ -1,16 +1,16 @@
 import { useState } from "react";
-import { DetalleDeudaCliente, DeudaClientesEntity } from "../core/Entities/clients/dedudaClientes";
+import {  DeudaClientesEntity } from "../core/Entities/clients/dedudaClientes";
 import { ModalFormPago } from "../controller/Components/ModalFormPago";
 
-import { CarritoOrdenes } from "../controller/Components/CarritoOrdenes";
+/*import { CarritoOrdenes } from "../controller/Components/CarritoOrdenes";*/
 import { OrdenesEspacios } from "../controller/Components/ORDENESESPACIOS";
 
-export function ORDENES() {
+export function ORDENEEspacios() {
   //const sede = localStorage.getItem('sede') ?? 'por favor inicie sesión para poder crear una orden';
 /**
    * Detalles de las órdenes
    */
-const [detalles, setDetalles] = useState<DetalleDeudaCliente[]>([]);
+/*const [detalles, setDetalles] = useState<DetalleDeudaCliente[]>([]);
 
 /*const RegistroDetalles =  (detalle:DetalleDeudaCliente[]) => {
     setDetalles(detalle);
@@ -50,10 +50,10 @@ const [detalles, setDetalles] = useState<DetalleDeudaCliente[]>([]);
               <BotoneraCategoria  ></BotoneraCategoria></div>
             */}
           </center>
-          <OrdenesEspacios selectorDeudor={SelectDeudor} detallesDeudor={setDetalles}/>
+          <OrdenesEspacios selectorDeudor={SelectDeudor} />
           <div className="mt-4 col-sm-2 col-md-4 col-lg-4 order-md-reverse">
-            <CarritoOrdenes activarModal={() => setIsModalOpen(true)} deudor={deudor} detalles={detalles} />
-          </div>
+           {/* <CarritoOrdenes activarModal={() => setIsModalOpen(true)} deudor={deudor} detalles={detalles} />
+         */} </div>
         </div>
       </main>
     </>
