@@ -27,6 +27,6 @@ npm install
 3. Instala las dependencias del backend:
    ```bash
    cd ../backend
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
    ```
