@@ -157,7 +157,7 @@ return ListaPedidos}
 
 
  return (
-        <div className="flex-row-reverse carrito rounded" style={{backgroundColor:"#1f2937"}} >
+        <div className="flex-row-reverse   carrito rounded" style={{backgroundColor:"#1f2937",right:"3%"}} >
             <form className="card p-2">
           <div className="input-group">
             <input type="text" value={inputValue}  onChange={handleInputChange} className="form-control" placeholder="Buscar Cliente "/>

@@ -92,7 +92,7 @@ return(<>
 
             </center>
             <ProductosEspacios categoria={categoria} insertarPedido={insertarPedidos}></ProductosEspacios>
-            <div className=" mt-4 col-sm-2 col-md-4 col-lg-4 order-md-reverse"><CarritoEspacios pedido={pedidos} aumento={incrementoProducto} descremento={descremento}></CarritoEspacios> </div>
+            <div className=" mt-4 col-sm-2 col-md-4 col-lg-4 order-md-reverse position-relative"><CarritoEspacios pedido={pedidos} aumento={incrementoProducto} descremento={descremento}></CarritoEspacios> </div>
         
             </div>
           
