@@ -65,7 +65,7 @@ const columns: GridColDef[] = [
     width: 200,
     editable: false,
     renderCell:(params)=>(
-    <ModalPayEspacios deudaCliente={params.row} ></ModalPayEspacios>
+    <ModalPayEspacios deudaCliente={JSON.stringify(params.row)} ></ModalPayEspacios>
     )
   },
   
