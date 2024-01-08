@@ -30,10 +30,11 @@ export  function ModalPayEspacios(props:any) {
             boxShadow: 'lg',
           }}
         >
-            <DetallesDeudasEspacios deudor={props.deudaCliente}></DetallesDeudasEspacios>
+            
             
           <ModalClose variant="plain" sx={{ m: 1 }} />
-          <CarritoOrdenes deudor={props.deudaCliente}></CarritoOrdenes>
+
+          <DetallesDeudasEspacios deudor={props.deudaCliente}></DetallesDeudasEspacios>
         </Sheet>
       </Modal>
     </React.Fragment>
