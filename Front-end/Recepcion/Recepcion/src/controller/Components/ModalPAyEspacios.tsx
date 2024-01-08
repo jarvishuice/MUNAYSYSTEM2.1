@@ -5,7 +5,6 @@ import ModalClose from '@mui/joy/ModalClose';
 
 import Sheet from '@mui/joy/Sheet';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
-import { CarritoOrdenes } from './CarritoOrdenes';
 import { DetallesDeudasEspacios } from './DetalleDeudasEspacios';
 export  function ModalPayEspacios(props:any) {
   const [open, setOpen] = React.useState<boolean>(false);
