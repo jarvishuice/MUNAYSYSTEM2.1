@@ -65,7 +65,7 @@ const columns: GridColDef[] = [
     width: 200,
     editable: false,
     renderCell:(params)=>(
-    <ModalPayEspacios deudaCliente={JSON.stringify(params)} onClick={()=>botonera(params)} ></ModalPayEspacios>
+    <ModalPayEspacios deudaCliente={JSON.stringify(params.row)} onClick={()=>botonera(params)} ></ModalPayEspacios>
     )
   },
   

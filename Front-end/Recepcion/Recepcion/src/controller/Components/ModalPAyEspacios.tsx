@@ -24,7 +24,7 @@ export  function ModalPayEspacios(props:any) {
         <Sheet
           variant="outlined"
           sx={{
-            
+            maxWidth: 500,
             borderRadius: 'md',
             p: 3,
             boxShadow: 'lg',
@@ -33,7 +33,7 @@ export  function ModalPayEspacios(props:any) {
             
             
           <ModalClose variant="plain" sx={{ m: 1 }} />
-            <Grid container spacing={8} sx={{ flexGrow: 1}}> 
+            <Grid container spacing={2} sx={{ flexGrow: 1}}> 
             <Grid xs={4}><DetallesDeudasEspacios deudor={props.deudaCliente}>
                         </DetallesDeudasEspacios>
                     
