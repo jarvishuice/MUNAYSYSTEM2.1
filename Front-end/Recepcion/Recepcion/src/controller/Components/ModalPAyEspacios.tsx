@@ -9,6 +9,7 @@ import { DetallesDeudasEspacios } from './DetalleDeudasEspacios';
 import { Grid } from '@mui/joy';
 export  function ModalPayEspacios(props:any) {
   const [open, setOpen] = React.useState<boolean>(false);
+  
   return (
     <React.Fragment>
       <Button color="primary" startDecorator={<WorkHistoryIcon/>}  size="sm"onClick={() => setOpen(true)}>

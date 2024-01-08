@@ -16,7 +16,7 @@ function CustomToolbar() {
 
 function botonera(params:any){
  
-  alert(JSON.stringify(params.row.idCliente).replace(/['"]+/g, ''));
+  alert("DEudas "+ JSON.stringify(params));
 
 }
 const columns: GridColDef[] = [
