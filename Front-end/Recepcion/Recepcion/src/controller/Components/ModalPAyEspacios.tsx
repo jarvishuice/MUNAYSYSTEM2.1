@@ -7,6 +7,7 @@ import Sheet from '@mui/joy/Sheet';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import { DetallesDeudasEspacios } from './DetalleDeudasEspacios';
 import { Grid } from '@mui/joy';
+import { PagosEspacios } from './pagosEspacios';
 export  function ModalPayEspacios(props:any) {
   const [open, setOpen] = React.useState<boolean>(false);
 
@@ -35,8 +36,7 @@ export  function ModalPayEspacios(props:any) {
             
           <ModalClose variant="plain" sx={{ m: 1 }} />
             <Grid container spacing={50} sx={{ flexGrow: 1}}> 
-            <Grid xs={4}><DetallesDeudasEspacios deudor={props.deudaCliente}>
-                        </DetallesDeudasEspacios>
+            <Grid xs={4}><PagosEspacios cliente={props.dedudaClientes}/>
                     
                         </Grid>
                         <Grid xs={7}><DetallesDeudasEspacios deudor={props.deudaCliente}>
