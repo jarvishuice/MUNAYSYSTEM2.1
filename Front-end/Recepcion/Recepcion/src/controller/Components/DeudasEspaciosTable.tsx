@@ -2,10 +2,9 @@
 import Box from '@mui/material/Box';
 import { DataGrid, GridColDef, GridToolbarContainer, GridToolbarExport, } from '@mui/x-data-grid';
 import { useEffect, useState } from 'react';
-import { Button } from '@mui/joy';
 import { DeudasClientesEspaciosDAO } from '../../core/Implements/clients/deudasClientesEspaciosDAO';
 import { DeudaClientesEntity } from '../../core/Entities/clients/dedudaClientes';
-import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
+import { ModalPayEspacios } from './ModalPAyEspacios';
 function CustomToolbar() {
     return (
       <GridToolbarContainer>
@@ -15,11 +14,11 @@ function CustomToolbar() {
   }
 
 
-function botonera(params:any){
+/**function botonera(params:any){
  
   alert(JSON.stringify(params.row.idCliente).replace(/['"]+/g, ''));
 
-}
+}*/
 const columns: GridColDef[] = [
   {
     field: 'idCliente',
@@ -66,7 +65,7 @@ const columns: GridColDef[] = [
     width: 200,
     editable: false,
     renderCell:(params)=>(
-      <Button color="primary" startDecorator={<WorkHistoryIcon/>}  size="sm" onClick={()=>botonera(params)}> DETALLES </Button>
+    <ModalPayEspacios deudaCliente={params.row} ></ModalPayEspacios>
     )
   },
   
