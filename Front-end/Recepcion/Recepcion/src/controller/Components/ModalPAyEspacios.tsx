@@ -34,11 +34,11 @@ export  function ModalPayEspacios(props:any) {
             
           <ModalClose variant="plain" sx={{ m: 1 }} />
             <Grid container spacing={8} sx={{ flexGrow: 1}}> 
-            <Grid xs={8}><DetallesDeudasEspacios deudor={props.deudaCliente}>
+            <Grid xs={4}><DetallesDeudasEspacios deudor={props.deudaCliente}>
                         </DetallesDeudasEspacios>
                     
                         </Grid>
-                        <Grid xs={8}><DetallesDeudasEspacios deudor={props.deudaCliente}>
+                        <Grid xs={4}><DetallesDeudasEspacios deudor={props.deudaCliente}>
                         </DetallesDeudasEspacios>
                     
                         </Grid>
