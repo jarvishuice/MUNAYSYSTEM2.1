@@ -19,6 +19,7 @@ function botonera(params:any){
   alert("DEudas "+ JSON.stringify(params));
 
 }
+
 const columns: GridColDef[] = [
   {
     field: 'idCliente',
@@ -65,7 +66,13 @@ const columns: GridColDef[] = [
     width: 200,
     editable: false,
     renderCell:(params)=>(
-    <ModalPayEspacios onClick={()=>botonera(params)} deudaCliente={JSON.stringify(params.row)}  ></ModalPayEspacios>
+    <ModalPayEspacios onClick={()=>botonera(params)} deudaCliente={{  
+      idCliente:Number(JSON.stringify(params.row.idCliente).replace(/['"]+/g, '')),
+      ci:String(JSON.stringify(params.row.ci).replace(/['"]+/g, '')),
+      nombre:String(JSON.stringify(params.row.nombre).replace(/['"]+/g, '')),
+      cantidadOrenes:Number(JSON.stringify(params.row.cantidadOrdenes).replace(/['"]+/g, '')),
+      deuda:Number(JSON.stringify(params.row.deuda).replace(/['"]+/g, ''))
+    }}  ></ModalPayEspacios>
     )
   },
   
