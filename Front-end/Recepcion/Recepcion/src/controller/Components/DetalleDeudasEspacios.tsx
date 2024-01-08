@@ -20,7 +20,7 @@ useEffect (()=>{
           }
     }
     fecthWallet();
-  },[props.deudor.idCliente]);
+  },[]);
 
 
 /**
@@ -33,6 +33,7 @@ async function DETALLESDEUDAS(idCliente:number) {
     const controladorDeudas = new DeudasClientesEspaciosDAO();
     const data = await controladorDeudas.DetalleDeudaClientes(sede, idCliente);
     setDetalles(data);
+    alert(idCliente)
 
     console.log(data);
   } catch (error) {
@@ -40,7 +41,10 @@ async function DETALLESDEUDAS(idCliente:number) {
   }
   
 }
-DETALLESDEUDAS(props.deudor.idCliente);
+useEffect(()=>{
+    DETALLESDEUDAS(props.deudor.idCliente);
+},[])
+
 return( <div className="flex-row-reverse carrito rounded  mt-2" style={{backgroundColor:"#1f2937"}} >
     
         
