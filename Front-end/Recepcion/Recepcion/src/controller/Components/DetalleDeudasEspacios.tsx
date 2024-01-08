@@ -43,7 +43,7 @@ async function DETALLESDEUDAS(idCliente:number) {
 }
 useEffect(()=>{
     DETALLESDEUDAS(props.deudor.idCliente);
-    alert( "este es el del props.deudor.idcliente "+typeof(props.deudor.idCliente));
+    alert(typeof(props.deudor.idCliente))
 },[])
 
 return( <div className="flex-row-reverse carrito rounded  mt-2" style={{backgroundColor:"#1f2937"}} >
