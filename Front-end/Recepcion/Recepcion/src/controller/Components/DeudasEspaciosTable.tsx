@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@mui/joy';
 import { DeudasClientesEspaciosDAO } from '../../core/Implements/clients/deudasClientesEspaciosDAO';
 import { DeudaClientesEntity } from '../../core/Entities/clients/dedudaClientes';
+import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 function CustomToolbar() {
     return (
       <GridToolbarContainer>
@@ -16,7 +17,7 @@ function CustomToolbar() {
 
 function botonera(params:any){
  
-  alert(JSON.stringify(params.row.id).replace(/['"]+/g, ''));
+  alert(JSON.stringify(params.row.idCliente).replace(/['"]+/g, ''));
 
 }
 const columns: GridColDef[] = [
@@ -59,13 +60,13 @@ const columns: GridColDef[] = [
   },
   
   {
-    field: 'salir',
-    headerName: 'salir ',
+    field: 'Detalles',
+    headerName: 'Detalles',
  
-    width: 110,
+    width: 200,
     editable: false,
     renderCell:(params)=>(
-      <Button color="danger"  size="lg" onClick={()=>botonera(params)}> DETALLES </Button>
+      <Button color="primary" startDecorator={<WorkHistoryIcon/>}  size="lg" onClick={()=>botonera(params)}> DETALLES </Button>
     )
   },
   
