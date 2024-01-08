@@ -13,7 +13,7 @@ useEffect (()=>{
     async function fecthWallet() {
         try {
             const controladorWallet = new WalletDAO();
-            const data = await controladorWallet.consultasaldoWallet(Number(JSON.stringify(props.deudor.idCliente).replace(/['"]+/g, '')));
+            const data = await controladorWallet.consultasaldoWallet((props.deudor.idCliente).replace(/['"]+/g, ''));
             setWallet(data);
           } catch (error) {
             console.error(error);
@@ -42,7 +42,7 @@ async function DETALLESDEUDAS(idCliente:number) {
   
 }
 useEffect(()=>{
-    DETALLESDEUDAS(Number(JSON.stringify(props.deudor.idCliente).replace(/['"]+/g, '')));
+    DETALLESDEUDAS(Number(props.deudor.idCliente));
 },[])
 
 return( <div className="flex-row-reverse carrito rounded  mt-2" style={{backgroundColor:"#1f2937"}} >
