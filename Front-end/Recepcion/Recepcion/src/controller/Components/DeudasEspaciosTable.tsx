@@ -111,6 +111,7 @@ const rows = deudas ;
   slots={{
     toolbar: CustomToolbar,
   }}
+
 rows={rows}
         columns={columns}
         initialState={{
@@ -120,6 +121,7 @@ rows={rows}
             },
           },
         }}
+        getRowId={(row) => row.idCliente}
         pageSizeOptions={[7]}
      
         disableRowSelectionOnClick
