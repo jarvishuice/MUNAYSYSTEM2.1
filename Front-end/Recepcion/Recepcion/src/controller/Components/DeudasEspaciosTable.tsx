@@ -52,7 +52,7 @@ const columns: GridColDef[] = [
 
   {
     field: 'deuda',
-    headerName: 'DEUDA$',
+    headerName: 'DEUDAS$',
    
     width: 110,
     editable: false,
@@ -61,12 +61,12 @@ const columns: GridColDef[] = [
   
   {
     field: 'Detalles',
-    headerName: 'Detalles',
+    headerName: 'DETALLES',
  
     width: 200,
     editable: false,
     renderCell:(params)=>(
-      <Button color="primary" startDecorator={<WorkHistoryIcon/>}  size="lg" onClick={()=>botonera(params)}> DETALLES </Button>
+      <Button color="primary" startDecorator={<WorkHistoryIcon/>}  size="sm" onClick={()=>botonera(params)}> DETALLES </Button>
     )
   },
   
