@@ -14,11 +14,11 @@ function CustomToolbar() {
   }
 
 
-/**function botonera(params:any){
+function botonera(params:any){
  
   alert(JSON.stringify(params.row.idCliente).replace(/['"]+/g, ''));
 
-}*/
+}
 const columns: GridColDef[] = [
   {
     field: 'idCliente',
@@ -65,7 +65,7 @@ const columns: GridColDef[] = [
     width: 200,
     editable: false,
     renderCell:(params)=>(
-    <ModalPayEspacios deudaCliente={JSON.stringify(params.row)} ></ModalPayEspacios>
+    <ModalPayEspacios deudaCliente={JSON.stringify(params)} onClick={()=>botonera(params)} ></ModalPayEspacios>
     )
   },
   
