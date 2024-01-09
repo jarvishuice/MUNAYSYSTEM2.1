@@ -21,25 +21,27 @@ export  function ModalPayEspacios(props:any) {
         aria-describedby="modal-desc"
         open={open}
         onClose={() => setOpen(false)}
-        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' ,}}
       >
         <Sheet
           variant="outlined"
           sx={{
-            maxWidth: "100%",
+            width: "60%",
             borderRadius: 'md',
             p: 4,
             boxShadow: 'lg',
+            marginTop:12,
+          
           }}
         >
             
             
           <ModalClose variant="plain" sx={{ m: 1 }} />
-            <Grid container spacing={10} sx={{ flexGrow: 1}}> 
-            <Grid xs={2}><PagosEspacios cliente={props.deudaCliente}/>
+            <Grid style={{ maxHeight: '550px', overflow: 'auto' }} container spacing={2} sx={{ flexGrow: 2}}> 
+            <Grid xs={6}><PagosEspacios cliente={props.deudaCliente}/>
                     
                         </Grid>
-                        <Grid xs={7}><DetallesDeudasEspacios deudor={props.deudaCliente}>
+                        <Grid xs={5}><DetallesDeudasEspacios deudor={props.deudaCliente}>
                         </DetallesDeudasEspacios>
                     
                         </Grid>

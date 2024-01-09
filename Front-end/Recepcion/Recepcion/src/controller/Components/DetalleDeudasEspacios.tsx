@@ -79,9 +79,7 @@ return( <div className="flex-row-reverse carrito rounded  mt-2" style={{backgrou
   
  
 </ul>
-<center><div className="list-group-item bg-secondary d-flex justify-content-between">
-<button className="btn  w-100 btn-primary p-2 rounded "  > Pagar Deuda</button>
-</div></center>
+
 
 
 </div>

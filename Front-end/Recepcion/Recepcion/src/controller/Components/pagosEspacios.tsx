@@ -1,7 +1,7 @@
 
 //debo de sacar el wallet fuction para porderlo actualizar sin recarga 
 import React, {useEffect, useState } from 'react';
-
+import "../../Espacios.css"
 import { WalletDAO } from '../../core/Implements/wallet/walletDAO';
 import { TasaDollarDAO } from '../../core/Implements/finance/tasaDollarDAO';
 import { CuentasEntity } from '../../core/Entities/cuentas/cuentasEntity';
@@ -144,43 +144,40 @@ setEReferencia(e.target.value)
 //control de visualizacon del modal 
 
 //=======
-return(  <div className='w-50'  >
-<section className="">
-  <div className="">
-    <div className="">
-      <h2>Pagos</h2>
-      
-    </div>
+return(  <main className="page payment-page  " >
+<section className="payment-form dark">
+  <div className="container">
+   
     <form>
-      <div >
-        <h3 >Informacion del cliente</h3>
-        <div >
-          <span >{props.cliente.nombre}</span>
-          <p >Cliente </p>
+      <div className="products">
+        <h3 className="title">Informacion del cliente</h3>
+        <div className="item">
+          <span className="price">{props.cliente.nombre}</span>
+          <p className="item-name">Cliente </p>
         
         </div>
-        <div >
-          <span >${wallet.toFixed(2)}</span>
-          <p >Wallet </p>
+        <div className="item">
+          <span className="price">${wallet.toFixed(2)}</span>
+          <p className="item-name">Wallet </p>
           
         </div>
-        <div >
-          <span >${props.cliente.deuda.toFixed(2)}</span>
-          <p >Total </p>
+        <div className="item">
+          <span className="price">${props.cliente.deuda.toFixed(2)}</span>
+          <p className="item-name">Total </p>
           
         </div>
-        <div>
-          <span >BS.{tasa.toFixed(2)}</span>
-          <p >TasaBCV </p>
+        <div className="item">
+          <span className="price">BS.{tasa.toFixed(2)}</span>
+          <p className="item-name">TasaBCV </p>
           
         </div>
-        <div >Total A pagar Bs<span >Bs.{((props.cliente.deuda - wallet) * tasa).toFixed(2)}</span></div>
-        <div>Total A pagar <span >${(props.cliente.deuda - wallet).toFixed(2)}</span></div>
+        <div className="total">Total A pagar Bs<span className="price">Bs.{((props.cliente.deuda - wallet) * tasa).toFixed(2)}</span></div>
+        <div className="total">Total A pagar <span className="price">${(props.cliente.deuda - wallet).toFixed(2)}</span></div>
       </div>
-      <div >
-        <h3>Informacion de pago</h3>
-        <div>
-          <div >
+      <div className="card-details">
+        <h3 className="title">Informacion de pago</h3>
+        <div className="row">
+          <div className="form-group col-sm-7">
             <label htmlFor="card-holder"> forma de pago</label>
             <select id="card-holder" value={fpago} onChange={handleChangefpago} className="form-control" placeholder="Card Holder" aria-label="Card Holder" aria-describedby="basic-addon1">
             {payForm.map((items=>(
@@ -189,16 +186,16 @@ return(  <div className='w-50'  >
             </select>
           </div>
           
-          <div >
+          <div className="form-group col-sm-8">
             <label htmlFor="card-number">Referencia</label>
             <input id="card-number" onChange={handleChangeReferencia} value={ERferencia} type="text" className="form-control" placeholder="Referencia" aria-label="Card Holder" aria-describedby="basic-addon1"/>
           </div>
-          <div >
+          <div className="form-group col-sm-4">
             <label htmlFor="cvc" >Monto</label>
             <input id="cvc" type="number"  step="0.01" value={montoValue} onChange={handleChange}  placeholder={`${props.cliente.deuda - wallet}`} className="form-control" aria-label="Card Holder" aria-describedby="basic-addon1"/>
           </div>
           
-            <button type="button" className={"btn  btn-success "} disabled={(montoValue >= props.cliente.deuda - wallet)?false:true} onClick={()=>{
+            <button type="button" style={{width:"30%"}} className={"btn btn-success botonPagosEspacios "} disabled={(montoValue >= props.cliente.deuda - wallet)?false:true} onClick={()=>{
                 SaldarDeudas(0,wallet,{id:'f',
                 fecha:"f",
                 monto:montoValue,
@@ -213,7 +210,7 @@ return(  <div className='w-50'  >
                 });
             }}>Pagar</button>
             
-            <button type="button" className={"btn btn-warning "} disabled={montoValue < (props.cliente.deuda - wallet) ?false:true} onClick={()=>{Multipago({
+            <button type="button" style={{width:"30%",marginLeft:"5px"}} className={"btn btn-warning "} disabled={montoValue < (props.cliente.deuda - wallet) ?false:true} onClick={()=>{Multipago({
                 id:"f",
                 fecha:"f",
                 monto:montoValue??0.0,
@@ -227,14 +224,14 @@ return(  <div className='w-50'  >
 
 
             }),reinicio()}}>MultiPago</button>
-            <button type="button" onClick={props.onClose} className="btn btn-danger">Cerrar</button>
+            <button type="button" style={{width:"30%",marginLeft:"5px"}} onClick={props.onClose} className="btn btn-danger">Cerrar</button>
 
         </div>
       </div>
     </form>
   </div>
 </section>
-</div>
+</main>
 )
 
 
