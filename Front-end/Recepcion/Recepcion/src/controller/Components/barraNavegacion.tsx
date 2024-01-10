@@ -16,6 +16,7 @@ const prefijo='Reports'
 const sede = localStorage.getItem('sede')
 const seccion = new logginDAO()
 const USUARIOACTIVO =JSON.parse(localStorage.getItem('User')?? '')
+//en img w=30 h=24
 export function BarraNavegacion (props:any){
     return(<><header className=''>
     <nav className="navbar  p-3">
