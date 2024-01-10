@@ -6,15 +6,15 @@ from config.Db.conectionsPsqlInterface import ConectionsPsqlInterface
 
 from core.Implements.pagos.pagosEspaciosDAO import PagosEspaciosDAO
 from core.Implements.pagos.pagosWalletDAO import PagosWalletDAO
-from core.Implements.wallet.walletDAO import WalletDAO,WalletEntity
+from core.Implements.wallet.walletEspaciosDAO import WalletEspaciosDAO,WalletEntity
 import time
 from config.Logs.LogsActivity import Logs
 class DeudaCientesEspaciosDAO(ConectionsPsqlInterface,IDedudaClientes):
     def __init__(self):
         super().__init__()
-    integracionPagos=PagosEspaciosDAO()
-    integracionWalletPagos=PagosWalletDAO()
-    integracionWallet=WalletDAO()
+    __integracionPagos=PagosEspaciosDAO()
+    __integracionWalletPagos=PagosWalletDAO()
+    __integracionWallet=WalletEspaciosDAO()
     def getDeudasClientesBySede(self,sede) -> list[DeudaClienteCoffeShopEntity]:
         try:
             conection= self.connect()  
@@ -87,12 +87,12 @@ group by c.nombre ,p.idorden,i.nombre,p.cantidad,p.total,o.fechapedido;
             conexion= self.connect()
             if conexion['status'] ==True:       
                if Rwallet > 0:
-                   pago.motivo=f"orden coffeShop {pago.sede} + recarga de wallet {Rwallet}"
+                   pago.motivo=f"orden espacios {pago.sede} + recarga de wallet {Rwallet}"
                
-               rPago=self.integracionPagos.registrarPago(pago)
+               rPago=self.__integracionPagos.registrarPago(pago)
                if rPago['status']==True:
-                   walletDescuento=self.integracionWallet.descuentowallet(WalletEntity(id=str('x'),idcliente=int(pago.idcliente),monto=float(Dwallet),idpago=str(rPago['response'].id),status=str('aplicado')))
-                   walletRecarga=self.integracionWallet.reacargarWallet(WalletEntity(id=str('x'),idcliente=int(pago.idcliente),monto=float(Rwallet),idpago=str(rPago['response'].id),status=str('aplicado')))
+                   walletDescuento=self.__integracionWallet.descuentowallet(WalletEntity(id=str('x'),idcliente=int(pago.idcliente),monto=float(Dwallet),idpago=str(rPago['response'].id),status=str('aplicado')))
+                   walletRecarga=self.__integracionWallet.reacargarWallet(WalletEntity(id=str('x'),idcliente=int(pago.idcliente),monto=float(Rwallet),idpago=str(rPago['response'].id),status=str('aplicado')))
                    if walletRecarga['status']==True and walletDescuento['status'] ==True:
                        self.__statusByDeudabyClientebySede__(rPago['response'].id,pago.sede,pago.idcliente)
                        return ResponseInternal.responseInternal(True,"exito al cancelar ls ordenes de los clientes",rPago['response'])               
