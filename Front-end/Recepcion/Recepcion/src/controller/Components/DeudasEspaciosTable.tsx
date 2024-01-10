@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 import { DeudasClientesEspaciosDAO } from '../../core/Implements/clients/deudasClientesEspaciosDAO';
 import { DeudaClientesEntity } from '../../core/Entities/clients/dedudaClientes';
 import { ModalPayEspacios } from './ModalPAyEspacios';
+import { TasaDollarDAO } from '../../core/Implements/finance/tasaDollarDAO';
+
 function CustomToolbar() {
     return (
       <GridToolbarContainer>
@@ -13,10 +15,12 @@ function CustomToolbar() {
     );
   }
 
+  const tasaController = new TasaDollarDAO()
+  const tasa = tasaController.ObtenerTazaActual()
 
 function botonera(params:any){
  
-  alert("DEudas "+ JSON.stringify(params));
+ console.log("DEudas "+ JSON.stringify(params));
 
 }
 
@@ -57,7 +61,17 @@ const columns: GridColDef[] = [
     width: 110,
     editable: false,
     
-  },
+  },{
+    field: 'DeudaBS',
+    headerName: 'DEUDA BS',
+ 
+    width: 200,
+    editable: false,
+    renderCell:(params)=>(
+    Number(Number(JSON.stringify(params.row.deuda).replace(/['"]+/g, '')) * Number(tasa)).toFixed(2)
+    )
+  }
+  ,
   
   {
     field: 'Detalles',
