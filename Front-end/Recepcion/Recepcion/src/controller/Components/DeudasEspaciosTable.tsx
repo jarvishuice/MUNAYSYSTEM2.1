@@ -68,7 +68,7 @@ const columns: GridColDef[] = [
     width: 200,
     editable: false,
     renderCell:(params)=>(
-    Number(Number(JSON.stringify(params.row.deuda).replace(/['"]+/g, '')) * Number(tasa)).toFixed(2)
+    Number(Number(JSON.stringify(params.row.deuda).replace(/['"]+/g, ''))* Number(tasa)).toFixed(2)
     )
   }
   ,
