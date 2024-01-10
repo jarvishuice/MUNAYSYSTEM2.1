@@ -33,7 +33,7 @@ async function DETALLESDEUDAS(idCliente:number) {
     const controladorDeudas = new DeudasClientesEspaciosDAO();
     const data = await controladorDeudas.DetalleDeudaClientes(sede, idCliente);
     setDetalles(data);
-    alert( "id cliente DEtalles"+ idCliente)
+    //alert( "id cliente DEtalles"+ idCliente)
 
     console.log(data);
   } catch (error) {
@@ -43,7 +43,7 @@ async function DETALLESDEUDAS(idCliente:number) {
 }
 useEffect(()=>{
     DETALLESDEUDAS(props.deudor.idCliente);
-    alert(typeof(props.deudor.idCliente))
+    //alert(typeof(props.deudor.idCliente))
 },[])
 
 return( <div className="flex-row-reverse carrito rounded  mt-2" style={{backgroundColor:"#1f2937"}} >
