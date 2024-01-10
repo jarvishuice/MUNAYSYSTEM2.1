@@ -19,6 +19,8 @@ import { Visitantes } from "../../views/Visitantes";
 import { ClientesMaster } from "../../views/ClientesMAster";
 import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 import { ModalReports } from "./ModalReport";
+import { ESPACIOS } from "../../views/ESPACIOS";
+import AddHomeWorkIcon from '@mui/icons-material/AddHomeWork';
 
 
 export function Navegacion(props:any){
@@ -81,6 +83,7 @@ export function Navegacion(props:any){
       <ListItemButton onClick={()=> props.setComponente(<OrdenesCompleto/>)} >{<ReceiptIcon/>}Ordenes</ListItemButton>
       <ListItemButton onClick={()=> props.setComponente(<ClientesMaster/>)} >{<GroupIcon/>}Clientes</ListItemButton>
       <ListItemButton onClick={()=> props.setComponente(<Visitantes/>)} >{<HowToRegIcon/>}Visitantes</ListItemButton>
+      <ListItemButton onClick={()=> props.setComponente(<ESPACIOS></ESPACIOS>)}>{<AddHomeWorkIcon></AddHomeWorkIcon>} Espacios </ListItemButton>
       <ListItemButton > <ModalReports></ModalReports>     </ListItemButton>
       <ListItemButton>{<LogoutIcon/>}Salir</ListItemButton>
     </List>
