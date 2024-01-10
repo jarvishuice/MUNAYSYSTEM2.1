@@ -17,15 +17,16 @@ function CustomToolbar() {
 
   const tasaController = new TasaDollarDAO()
   var  tasa=0
-  async function fecthWallet() {
+  async function fecthTasa() {
     try {
-        const controladorWallet = new WalletEspaciosDAO();
-        const data = await controladorWallet.consultasaldoWallet(props.cliente.idCliente);
+        const controladorWallet =  tasaController;
+        const data = await controladorWallet.ObtenerTazaActual();
         tasa= data
       } catch (error) {
         console.error(error);
       }
   }
+  fecthTasa();
 
 function botonera(params:any){
  const x = params
