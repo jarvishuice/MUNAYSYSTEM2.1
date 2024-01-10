@@ -18,4 +18,5 @@ class Derived extends Base {
     }
 }
 
-console.log(new Derive)
+const c= new Derived()
+console.log(new Derived().greet())

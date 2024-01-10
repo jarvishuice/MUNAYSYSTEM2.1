@@ -1,16 +1,16 @@
 from core.Entities.pagos.pagosEntity import PagosEntity
+from core.Entities.clientes.clientesEntity import ClientesEntity
 from core.Interface.pagos.Ipagos import IPagos
 from core.config.ResponseInternal import ResponseInternal
 from config.Db.conectionsPsqlInterface import ConectionsPsqlInterface
-from core.Implements.wallet.walletDAO import WalletDAO,WalletEntity
+from core.test.clienteDataTest.clienteVAlidacion import CLientesVAlidacionData
+from core.Implements.wallet.walletEspaciosDAO import WalletEspaciosDAO,WalletEntity
 import time
-from config.helpers.override import override
 from config.Logs.LogsActivity import Logs
-class PagosEspaciosDAO(IPagos,ConectionsPsqlInterface):
-    wallet=WalletDAO()
+class PagosEspaciosDAO(ConectionsPsqlInterface,IPagos):
+    wallet=WalletEspaciosDAO()
     def __init__(self):
         super().__init__()
-    @override
     def registrarPago(self,pagoData: PagosEntity) -> PagosEntity:
         try:
             tazaSql="select id from tazadollar t  order by id desc limit 1 " #obtemner el id de la ultima taza registrada
@@ -38,10 +38,10 @@ class PagosEspaciosDAO(IPagos,ConectionsPsqlInterface):
         finally:
             self.disconnect()
             Logs.WirterTask(f"finalizado el registro del pago {pagoData.id}")
-    @override
+    
     def registrarAbono(self,pagoData: PagosEntity) -> PagosEntity:
         try:
-            pagoData.motivo=f"Multipago Espacios {pagoData.sede}"
+            pagoData.motivo="Abono deuda Espacios"
             pago=self.registrarPago(pagoData)
             if pago['status']==True:
                 wallet=self.wallet.reacargarWallet(WalletEntity(id=str(time.time()),idcliente=int(pagoData.idcliente),monto=float(pagoData.monto),idpago=str(pago['response'].id),status=str('aplicado')))
@@ -54,8 +54,7 @@ class PagosEspaciosDAO(IPagos,ConectionsPsqlInterface):
         finally:
             self.disconnect()
             Logs.WirterTask(" ha finalizado la ejecuscion del registro de abonos")
-    @override 
-    def registroMultipago(self,pagoData: PagosEntity) -> PagosEntity:
+    def registroMultipago(self,pagoData:PagosEntity)->PagosEntity:
         try:
             pagoData.motivo=f"Multipago coffeshop {pagoData.sede}"
             pago=self.registrarPago(pagoData)
