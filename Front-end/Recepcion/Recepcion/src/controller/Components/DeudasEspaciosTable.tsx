@@ -16,13 +16,13 @@ function CustomToolbar() {
   }
 
   const tasaController = new TasaDollarDAO()
-  const tasa =  await tasaController.ObtenerTazaActual()
+  const  tasa:Promise<Number> =async ()=>tasaController.ObtenerTazaActual();
 
 function botonera(params:any){
  const x = params
  localStorage.setItem("pp",x);
  console.log("DEudas ");
- console.log( "esta es la tasa "+tasa)
+ console.log( `esta es la tasa ${tasa} `)
 
 }
 
@@ -70,7 +70,7 @@ const columns: GridColDef[] = [
     width: 200,
     editable: false,
     renderCell:(params)=>(
-    Number(Number(JSON.stringify(params.row.deuda).replace(/['"]+/g, ''))* 1)
+    Number(Number(JSON.stringify(params.row.deuda).replace(/['"]+/g, ''))* await tasa)
     
     //Number(tasa)).toFixed(2)
     )
