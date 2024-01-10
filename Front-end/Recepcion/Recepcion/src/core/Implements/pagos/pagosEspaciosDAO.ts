@@ -2,7 +2,7 @@ import { PATHMUNAYSYSY } from "../../../Config/routes/pathsMuanaysys";
 import { PagosEntity } from "../../Entities/pagos/pagosEntity";
 import { IPagos } from "../../Interfaces/pagos/Ipagos";
 
-export class PagosDAO implements IPagos{
+export class PagosEspaciosDAO implements IPagos{
     private paths = new PATHMUNAYSYSY();
     private API = this.paths.PathAPI();
     private prefijo = 'Pagos';

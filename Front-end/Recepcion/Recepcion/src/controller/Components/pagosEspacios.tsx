@@ -8,8 +8,9 @@ import { TasaDollarDAO } from '../../core/Implements/finance/tasaDollarDAO';
 import { CuentasEntity } from '../../core/Entities/cuentas/cuentasEntity';
 import { CuentasDAO } from '../../core/Implements/Cuentas/cuentasDAO';
 import { PagosEntity } from '../../core/Entities/pagos/pagosEntity';
-import { PagosDAO } from '../../core/Implements/pagos/pagosDAO';
-import { DeudasClientesDAO } from '../../core/Implements/clients/deudasClientesDAO';
+import { PagosEspaciosDAO } from '../../core/Implements/pagos/pagosEspaciosDAO';
+
+import { DeudasClientesEspaciosDAO } from '../../core/Implements/clients/deudasClientesEspaciosDAO';
 
 export function PagosEspacios(props:any){
 const sede= localStorage.getItem('sede')??'cfm'
@@ -73,7 +74,7 @@ useEffect (()=>{
 //FUncion  para registrar multipago
 async function Multipago (pagoData:PagosEntity){
   try {
-    const contorladorPagos = new PagosDAO();
+    const contorladorPagos = new PagosEspaciosDAO();
     const data = await contorladorPagos.RegMultipago(pagoData);
     if (data != null ){
        alert(`Pago registrado de m,anera correcta bajo la modalidad de multipago con el #${data.id}`)
@@ -103,7 +104,7 @@ async function SaldarDeudas(Rwallet:number,Dwallet:number,pago:PagosEntity) {
   
 
   try{
-    const controladorDeudaClientes = new DeudasClientesDAO();
+    const controladorDeudaClientes = new DeudasClientesEspaciosDAO();
     const  data= await controladorDeudaClientes.SaldarDeudaClientes(Rwallet,Dwallet,pago)
     if (data != null){
     alert(`deuda pagada con el id de pago ${data.id}`);

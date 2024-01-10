@@ -84,7 +84,7 @@ export class DeudasClientesEspaciosDAO implements IDeudasCLientes{
   };
   async SaldarDeudaClientes(Rwallet: number, Dwallet: number, pago: PagosEntity): Promise<PagosEntity|null> {
     try{ 
-      const response =await fetch(`${this.API}${this.prefijo}/Deudas/cerrarDeudas/${Rwallet}/${Dwallet}`,{  method: 'PUT',
+      const response =await fetch(`${this.API}${this.prefijo}/deudas/Deudas/cerrarDeudas/${Rwallet}/${Dwallet}`,{  method: 'PUT',
       headers: this.headers,
       body: JSON.stringify(pago)});
       if (response.ok) {
