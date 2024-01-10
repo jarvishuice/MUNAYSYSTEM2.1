@@ -1,5 +1,5 @@
 import { Tabs, TabList, Tab, TabPanel } from "@mui/joy";
-import { POSESPACIOS } from "./POS_ESPACIOS";
+import {POSESPACIOS} from "./POS_ESPACIOS";
 //import { ORDENESESPACIOS } from "./OrdenesEspacios";
 import { DeudasEspaciosTable } from "../controller/Components/DeudasEspaciosTable";
 
