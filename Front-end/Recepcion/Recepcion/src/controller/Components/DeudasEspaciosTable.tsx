@@ -20,7 +20,7 @@ function CustomToolbar() {
 
 function botonera(params:any){
  
- console.log("DEudas "+ JSON.stringify(params));
+ console.log("DEudas ");
 
 }
 
