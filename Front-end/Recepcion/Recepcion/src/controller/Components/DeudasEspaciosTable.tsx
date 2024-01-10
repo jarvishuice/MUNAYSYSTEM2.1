@@ -16,11 +16,13 @@ function CustomToolbar() {
   }
 
   const tasaController = new TasaDollarDAO()
-  const tasa = tasaController.ObtenerTazaActual()
+  const tasa =  await tasaController.ObtenerTazaActual()
 
 function botonera(params:any){
  const x = params
+ localStorage.setItem("pp",x);
  console.log("DEudas ");
+ console.log( "esta es la tasa "+tasa)
 
 }
 
@@ -68,7 +70,9 @@ const columns: GridColDef[] = [
     width: 200,
     editable: false,
     renderCell:(params)=>(
-    Number(Number(JSON.stringify(params.row.deuda).replace(/['"]+/g, ''))* Number(tasa)).toFixed(2)
+    Number(Number(JSON.stringify(params.row.deuda).replace(/['"]+/g, ''))* 1)
+    
+    //Number(tasa)).toFixed(2)
     )
   }
   ,
