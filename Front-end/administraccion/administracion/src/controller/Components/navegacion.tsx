@@ -33,7 +33,7 @@ export function Navegacion(props:any){
     <div style={{backgroundColor:"#1f2937"}}>
  <React.Fragment>
  
-  <IconButton variant="outlined" style={{height:"4rem"}} color="neutral" onClick={() => setOpen(true)}>
+  <IconButton variant="outlined" style={{height:"4rem"}}  onClick={() => setOpen(true)}>
     <Menu />
     
   </IconButton>
