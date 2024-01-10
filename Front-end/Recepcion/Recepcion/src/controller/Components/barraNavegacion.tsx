@@ -22,7 +22,7 @@ export function BarraNavegacion (props:any){
   <div className="container-fluid ">
     <a className="navbar-brand text-white" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"  href="#">
       
-       <img src={"/Recepcion/assets/ne.png"} style={{backgroundColor:"white"}} alt="Logo" width="30" height="24" className="d-inline-block text-white align-text-top" />
+       <img src={"/Recepcion/assets/ne.png"} style={{backgroundColor:"white"}} alt="Logo" width="60" height="30" className="d-inline-block text-white align-text-top" />
          {'\t'}  NEST COWORKING
     </a>
     <button className="navbar-toggler border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
