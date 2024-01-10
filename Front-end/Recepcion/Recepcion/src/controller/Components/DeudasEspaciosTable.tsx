@@ -19,7 +19,7 @@ function CustomToolbar() {
   const tasa = tasaController.ObtenerTazaActual()
 
 function botonera(params:any){
- 
+ const x = params
  console.log("DEudas ");
 
 }
