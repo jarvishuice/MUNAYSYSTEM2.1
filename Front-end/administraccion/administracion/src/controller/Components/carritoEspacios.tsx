@@ -3,7 +3,7 @@ import { ClientesEntity } from "../../core/Entities/clients/clients";
 import { ClientesDAO } from "../../core/Implements/clients/clientesDAO";
 import { ProductosEntity } from "../../core/Entities/productos/productos";
 import { PedidosEntity } from "../../core/Entities/pedidos/pedidosEntity";
-import { WalletDAO } from "../../core/Implements/wallet/walletDAO";
+import { WalletEspaciosDAO } from "../../core/Implements/wallet/walletEspaciosDAO";
 import '../../App.css';
 import { OrdenesEntity } from "../../core/Entities/ordenes/ordenesEntity";
 import { OrdenesEspaciosDAO } from "../../core/Implements/Ordenes/OrdenesEspaciosDAO";
@@ -74,7 +74,7 @@ const[wallet,setWallet] = useState<number>(0);
 useEffect (()=>{
   async function fecthWallet() {
       try {
-          const controladorWallet = new WalletDAO();
+          const controladorWallet = new WalletEspaciosDAO();
           const data = await controladorWallet.consultasaldoWallet(cliente.id);
           setWallet(data);
         } catch (error) {
