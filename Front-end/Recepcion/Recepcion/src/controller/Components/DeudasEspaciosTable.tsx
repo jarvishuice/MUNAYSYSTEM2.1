@@ -16,7 +16,16 @@ function CustomToolbar() {
   }
 
   const tasaController = new TasaDollarDAO()
-  const  tasa:Promise<Number> =async ()=>tasaController.ObtenerTazaActual();
+  var  tasa=0
+  async function fecthWallet() {
+    try {
+        const controladorWallet = new WalletEspaciosDAO();
+        const data = await controladorWallet.consultasaldoWallet(props.cliente.idCliente);
+        tasa= data
+      } catch (error) {
+        console.error(error);
+      }
+  }
 
 function botonera(params:any){
  const x = params
@@ -70,7 +79,7 @@ const columns: GridColDef[] = [
     width: 200,
     editable: false,
     renderCell:(params)=>(
-    Number(Number(JSON.stringify(params.row.deuda).replace(/['"]+/g, ''))* await tasa)
+    Number(Number(JSON.stringify(params.row.deuda).replace(/['"]+/g, ''))*  tasa)
     
     //Number(tasa)).toFixed(2)
     )
