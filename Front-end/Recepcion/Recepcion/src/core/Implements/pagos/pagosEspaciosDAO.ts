@@ -21,7 +21,7 @@ export class PagosDAO implements IPagos{
         
         console.log(pago);
         try {
-            const response = await fetch(`${this.API}${this.prefijo}/MultiPago`, {
+            const response = await fetch(`${this.API}${this.prefijo}/Espacios/MultiPago`, {
                 method: 'POST',
                 headers: this.headers,
                 body: JSON.stringify(pago)

@@ -3,6 +3,7 @@
 import React, {useEffect, useState } from 'react';
 import "../../Espacios.css"
 import { WalletDAO } from '../../core/Implements/wallet/walletDAO';
+import { WalletEspaciosDAO } from '../../core/Implements/wallet/walletEspaciosDAO';
 import { TasaDollarDAO } from '../../core/Implements/finance/tasaDollarDAO';
 import { CuentasEntity } from '../../core/Entities/cuentas/cuentasEntity';
 import { CuentasDAO } from '../../core/Implements/Cuentas/cuentasDAO';
@@ -16,7 +17,7 @@ const reinicio=()=>{fecthWallet()}
 //estado wallet 
 async function fecthWallet() {
   try {
-      const controladorWallet = new WalletDAO();
+      const controladorWallet = new WalletEspaciosDAO();
       const data = await controladorWallet.consultasaldoWallet(props.cliente.idCliente);
       setWallet(data);
     } catch (error) {
