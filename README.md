@@ -15,13 +15,14 @@ Este es un sistema de ventas desarrollado con TypeScript, React para el frontend
 
 1. Clona el repositorio:
 ```bash
-git clone https://github.com/tu-usuario/sistema-de-ventas.git
+git clone https://github.com/jarvishuice/MUNAYSYSTEM2.1.git
 
 ```
-2. Instala las dependencias del frontend:
+2. Crea porcada vista (Recepcion,Administracion,cofeeShop) un proyecto react con vite con el siguiente comando:
+   Debes colocar el nombre del de la vista y seleccionar react y typeScript 
 ```bash
-cd frontend
-npm install
+npm create vite@latest
+
 ````
 
 3. Instala las dependencias del backend:
