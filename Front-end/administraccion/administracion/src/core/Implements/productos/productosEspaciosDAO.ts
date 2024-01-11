@@ -3,6 +3,7 @@ import { IProductos } from "../../Interfaces/productos/Iclientes";
 import { ProductosEntity } from "../../Entities/productos/productos";
 
 export class ProductosEspaciosDAO extends(IProductos){
+    private sede = localStorage.getItem('sede') ?? "seleccione una sede"
     private paths =  new PATHMUNAYSYSY()
     private API=  this.paths.PathAPI()
     private prefijo='Espacios'
@@ -15,11 +16,11 @@ export class ProductosEspaciosDAO extends(IProductos){
         super();
         console.log("nueva instancia de clientes ")
         this.paths= new PATHMUNAYSYSY()
-        
+        this.sede = localStorage.getItem('sede') ?? "seleccione una sede"
     }
     async BuscarProductos(name:string): Promise<ProductosEntity[]> {
      try{ 
-        const response =await fetch(`${this.API}${this.prefijo}/Productos/search/${name}`,{headers:this.headers,});
+        const response =await fetch(`${this.API}${this.prefijo}/Productos/search/${name}/${this.sede}`,{headers:this.headers,});
         if (response.ok) {
             const data = await response.json();
             console.log(data)

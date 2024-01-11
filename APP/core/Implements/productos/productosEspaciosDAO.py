@@ -62,7 +62,7 @@ class ProductosEspaciosDAO(IProductos,ConectionsPsqlInterface,):
             self.disconnect()
 
     @override
-    def BuscarProducto(self,name: str) -> list[ProductosEntity]:
+    def BuscarProducto(self,name: str,sede:str) -> list[ProductosEntity]:
         try:
             data=[]
             conexion=self.connect()
@@ -71,7 +71,7 @@ class ProductosEspaciosDAO(IProductos,ConectionsPsqlInterface,):
               with self.conn.cursor() as cur :
                   
                     cur.execute(f"""
-                                select * from productos_espacios where nombre ilike '%{name}%' 
+                                select * from productos_espacios where nombre ilike '%{name}%' and almacen = '{sede}'; 
                 """)
                     self.conn.commit()
                     count= cur.rowcount
