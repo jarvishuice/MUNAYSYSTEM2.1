@@ -14,9 +14,6 @@ export function BotoneraCategoriaEspacios(props:any){
 
   }
 
- 
- 
-
     return (<div className="btn-group  mt-2" role="group" aria-label="Basic outlined example">
     <button type="button" className="btn btn-outline-secondary" key='1' onClick={()=>{insertarCategoria('oficinas')}}>Oficinas</button>
     <button type="button" className="btn btn-outline-secondary" key='4' onClick={()=>{insertarCategoria('sala')}}>Salas</button>
