@@ -181,7 +181,7 @@ return(  <main className="page payment-page  " >
         <div className="row">
           <div className="form-group col-sm-7">
             <label htmlFor="card-holder"> forma de pago</label>
-            <select id="card-holder" value={fpago} onChange={handleChangefpago} className="form-control" placeholder="Card Holder" aria-label="Card Holder" aria-describedby="basic-addon1">
+            <select id="card-holder" value={fpago} onChange={handleChangefpago} className="form-control" aria-label="Card Holder" aria-describedby="basic-addon1">
             {payForm.map((items=>(
                 <option value={items.id}>{items.metodo}</option>
             )))}
