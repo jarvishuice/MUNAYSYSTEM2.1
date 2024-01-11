@@ -21,8 +21,11 @@ import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
 import { ModalReports } from "./ModalReport";
 import { ESPACIOS } from "../../views/ESPACIOS";
 import AddHomeWorkIcon from '@mui/icons-material/AddHomeWork';
+import { logginDAO } from "../../core/Implements/loggin/logginDAO";
 
 
+const seccion = new logginDAO()
+const USUARIOACTIVO =JSON.parse(localStorage.getItem('User')?? '')
 export function Navegacion(props:any){
   const logoNest='https://www.nestvzla.com/Nest/Static/Home_files/logonest.png';
   const [open, setOpen] = React.useState(false);
@@ -85,7 +88,7 @@ export function Navegacion(props:any){
       <ListItemButton onClick={()=> props.setComponente(<Visitantes/>)} >{<HowToRegIcon/>}Visitantes</ListItemButton>
       <ListItemButton onClick={()=> props.setComponente(<ESPACIOS></ESPACIOS>)}>{<AddHomeWorkIcon></AddHomeWorkIcon>} Espacios </ListItemButton>
       <ListItemButton > <ModalReports></ModalReports>     </ListItemButton>
-      <ListItemButton>{<LogoutIcon/>}Salir</ListItemButton>
+      <ListItemButton onClick = {()=>seccion.logout(USUARIOACTIVO)}>{<LogoutIcon/>}Salir</ListItemButton>
     </List>
   </Drawer>
 </React.Fragment>
