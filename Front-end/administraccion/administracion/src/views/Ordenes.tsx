@@ -8,6 +8,7 @@ import TabPanel from '@mui/joy/TabPanel';
 import { Ordenes } from "../controller/Components/ORDENES";
 import { CarritoOrdenes } from "../controller/Components/CarritoOrdenes";
 import { OrdenesTable } from "../controller/Components/TableOrdenes";
+import { TABLEPAY } from "../controller/Components/PAGOSTABLET";
 
 export function OrdenesCompleto(){
   return (
@@ -24,6 +25,9 @@ export function OrdenesCompleto(){
 </TabPanel>
 <TabPanel value={1}>
 <OrdenesTable/>
+</TabPanel>
+<TabPanel value={2}>
+<TABLEPAY></TABLEPAY>
 </TabPanel>
 </Tabs>
   )
