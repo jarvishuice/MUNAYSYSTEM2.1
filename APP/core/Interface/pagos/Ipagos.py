@@ -1,4 +1,4 @@
-from core.Entities.pagos.pagosEntity import PagosEntity
+from core.Entities.pagos.pagosEntity import PagosEntity,PagosDetailEntity
 from abc import ABC,abstractmethod
 from config.Logs.LogsActivity import Logs
 class IPagos(ABC):
@@ -13,7 +13,9 @@ class IPagos(ABC):
     @abstractmethod
     def registroMultipago(pagoData:PagosEntity)->PagosEntity:
         pass
-    @abstracmethod 
-    def editPay(pagoData:PagosEntity) -> PagosEntity:
+    @abstractmethod
+    def editPay(pagoData:PagosEntity) -> bool:
         pass
-    
+    @abstractmethod
+    def getAllPayDetail(sede: str) -> PagosDetailEntity:
+        pass 

@@ -6,7 +6,7 @@ from core.Implements.auth.authDAO import AuthDAO
 from fastapi import APIRouter,Request,HTTPException,UploadFile,File,Response,Depends
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from core.Implements.pagos.pagosDAO import PagosDAO
-from core.Entities.pagos.pagosEntity import PagosEntity
+from core.Entities.pagos.pagosEntity import PagosEntity,PagosDetailEntity
 core= PagosDAO()
 security = HTTPBearer()
 validator=AuthDAO()
@@ -48,3 +48,21 @@ async def registrarMultiPago(Pago:PagosEntity,auten:str=Depends(aut))-> PagosEnt
        return respuesta
    else:
        raise HTTPException(400,trigger['mesagge']) 
+@Pagos.get("/details/sede/{sede}")
+async def getDetailPayBySede(sede:str)-> list[PagosDetailEntity]:
+   trigger = core.getAllPayDetail(sede)
+   if trigger['status'] ==True:
+       respuesta= trigger['response']
+       return respuesta
+   else:
+       raise HTTPException(400,trigger['mesagge']) 
+
+@Pagos.put("/edit/")
+async def editPago(pago:PagosEntity)-> bool:
+   trigger = core.editPay(pago)
+   if trigger['status'] ==True:
+       respuesta= trigger['response']
+       return respuesta
+   else:
+       raise HTTPException(400,trigger['mesagge']) 
+   
