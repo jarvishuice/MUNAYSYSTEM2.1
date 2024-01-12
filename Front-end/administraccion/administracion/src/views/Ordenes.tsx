@@ -15,6 +15,7 @@ export function OrdenesCompleto(){
 <TabList>
   <Tab>Deudas Coffeshop</Tab>
   <Tab>Ordenes</Tab>
+  <Tab>Pagos</Tab>
  
 </TabList>
 <TabPanel value={0}>
