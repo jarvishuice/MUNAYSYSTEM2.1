@@ -1,9 +1,11 @@
-import { IconButton, Box } from "@mui/joy";
+
 import { GridColDef, DataGrid, GridToolbarContainer, GridToolbarExport } from "@mui/x-data-grid";
 import { useState,useEffect } from "react";
-import EditIcon from '@mui/icons-material/Edit';
+
 import { PagosDetailEntity } from "../../core/Entities/pagos/pagosEntity";
 import { PagosDAO } from "../../core/Implements/pagos/pagosDAO";
+import { ModalEditPay } from "./modalEditPay";
+import { Box } from "@mui/joy";
 function CustomToolbar() {
     return (
       <GridToolbarContainer>
@@ -11,11 +13,11 @@ function CustomToolbar() {
       </GridToolbarContainer>
     );
   }
-  function botonera(params:any){
+  /*function botonera(params:any){
     alert(`Cambios del cliente ${JSON.stringify(params.row.id)} realizado con exito !!!` );
   
   
-  }
+  }*/
 const columns: GridColDef[] = [
     {
       field: 'id',
@@ -26,7 +28,7 @@ const columns: GridColDef[] = [
     {
       field: 'fecha',
       headerName: 'Fecha',
-      width: 100,
+      width: 150,
       editable: false,
     },
   
@@ -58,7 +60,7 @@ const columns: GridColDef[] = [
       field: 'formaDepago',
       headerName: 'Metodo',
    
-      width: 100,
+      width: 200,
       editable: false,
     },
     {
@@ -84,26 +86,26 @@ const columns: GridColDef[] = [
       },
       {
         field: 'idcliente',
-        headerName: ' Referencia',
+        headerName: ' cliente ID',
     
         width: 10,
         editable: false,
       },
       {
         field: 'idformadepago',
-        headerName: 'idFormadepago',
+        headerName: '# forma pay ',
     
         width: 10,
         editable: false,
       },
     {
       field: '',
-      headerName: 'Guardar ',
+      headerName: 'Editar ',
    
       width: 30,
       editable: false,
       renderCell:(params)=>(
-        <IconButton color="primary"  variant="solid" size="sm" onClick={()=>botonera(params)} ><EditIcon/> </IconButton>
+        <ModalEditPay x={params}></ModalEditPay>
       )
     },
     
@@ -135,7 +137,7 @@ rows={rows}
       initialState={{
         pagination: {
           paginationModel: {
-            pageSize: 30,
+            pageSize: 50,
           },
         },
       }}
