@@ -13,3 +13,13 @@ class PagosEntity(BaseModel):
     sede:Optional[str]
 
     
+class PagosEntity(BaseModel):
+    id:str
+    fecha:str
+    monto:float
+    motivo:str
+    cliente:str
+    formaDepago:str
+    referencia:str
+    tasa:float
+    sede:str

@@ -13,3 +13,7 @@ class IPagos(ABC):
     @abstractmethod
     def registroMultipago(pagoData:PagosEntity)->PagosEntity:
         pass
+    @abstracmethod 
+    def editPay(pagoData:PagosEntity) -> PagosEntity:
+        pass
+    
