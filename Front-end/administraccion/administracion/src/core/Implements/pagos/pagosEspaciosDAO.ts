@@ -5,7 +5,7 @@ import { IPagos } from "../../Interfaces/pagos/Ipagos";
 export class PagosEspaciosDAO implements IPagos{
     private paths = new PATHMUNAYSYSY();
     private API = this.paths.PathAPI();
-    private prefijo = 'Pagos';
+    private prefijo = 'Espacios/Pagos';
     private sede = "ddd ";
     private headers = {
         'accept': 'application/json',
@@ -23,7 +23,7 @@ export class PagosEspaciosDAO implements IPagos{
         
         console.log(pago);
         try {
-            const response = await fetch(`${this.API}${this.prefijo}/Espacios/MultiPago`, {
+            const response = await fetch(`${this.API}${this.prefijo}/MultiPago`, {
                 method: 'POST',
                 headers: this.headers,
                 body: JSON.stringify(pago)
