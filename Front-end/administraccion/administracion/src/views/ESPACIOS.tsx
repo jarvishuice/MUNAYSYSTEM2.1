@@ -3,7 +3,7 @@ import {POSESPACIOS} from "./POS_ESPACIOS";
 //import { ORDENESESPACIOS } from "./OrdenesEspacios";
 import { DeudasEspaciosTable } from "../controller/Components/DeudasEspaciosTable";
 import { GestorPayEspacios } from "../controller/Components/gestorPayEspacios";
-
+import { TableOrderEspacios } from "../controller/Components/tableOrderEspacios"
 export function ESPACIOS(){
 return(<Tabs aria-label="Basic tabs" defaultValue={0}>
 <TabList>
@@ -11,6 +11,8 @@ return(<Tabs aria-label="Basic tabs" defaultValue={0}>
 
   <Tab>DEUDAS ESPACIOS</Tab>
   <Tab> PAGOS</Tab>
+
+<Tab> ORDENES</Tab>
 
 </TabList>
 <TabPanel value={0}>
@@ -25,7 +27,9 @@ return(<Tabs aria-label="Basic tabs" defaultValue={0}>
 <TabPanel value ={2}> 
 <GestorPayEspacios.TABLEPAY></GestorPayEspacios.TABLEPAY>
  </TabPanel>
-
+<TabPanel value={3}> 
+<TableOrderEspacios></TableOrderEspacios>
+</TabPanel>
 
 </Tabs>)
 
