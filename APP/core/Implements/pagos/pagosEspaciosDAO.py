@@ -76,7 +76,7 @@ class PagosEspaciosDAO(ConectionsPsqlInterface,IPagos):
             if conection['status'] == True:
                 with self.conn.cursor() as cur :
                     cur.execute(f"""
-                                update pagos_espacios set idformadepago = {pagoData.idformadepago} , fechapago = {pagoData.fecha}
+                                update pagos_espacios set idformadepago = {pagoData.idformadepago} , fechapago = '{pagoData.fecha}'
                                 where id = '{pagoData.id}';
                                 """)
                     self.conn.commit()             
