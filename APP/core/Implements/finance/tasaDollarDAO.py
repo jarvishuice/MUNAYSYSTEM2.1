@@ -2,10 +2,11 @@
 
 
 
-from core.Interface.finance.ItazaDollar import ItasaDollar
+import time
+from core.Interface.finance.ItazaDollar import ItasaDollar,TasaDollarEntity
 from core.config.ResponseInternal import ResponseInternal
 from config.Db.conectionsPsqlInterface import ConectionsPsqlInterface
-
+from providers.Services.finance import Finance
 from config.Logs.LogsActivity import Logs
 """ Esta clase es la encargada de gestiionar todo lo  referentes a llas operaciones que se realizararn con el wallet contemplando la tabla de pagos 
 esta complementa a wallet DAo 
@@ -13,8 +14,9 @@ el atrubuto wallet es la implementacion de walletDAO donde esta toda la lohgiaca
 
     """
 class TasaDollarDAO(ConectionsPsqlInterface,ItasaDollar):
-
+    finance = Finance()
     def __init__(self):
+      \
         super().__init__()
     
     def tasaDollarLastRegister(self) -> float:
@@ -50,5 +52,33 @@ class TasaDollarDAO(ConectionsPsqlInterface,ItasaDollar):
             self.disconnect()
             Logs.WirterTask("Finalizada la ejecucion de registros de productos ")
              
-
-        
+    def updateTasa(self)->TasaDollarEntity|bool: 
+        try:
+            precio = self.finance.getTasaBcv()
+            if precio == False:
+                return ResponseInternal.responseInternal(False,f"No se pudo obtener la tasa del dia ",False)
+            tasa=TasaDollarEntity(id=str(time.time()),precio=float(precio))
+            conexion=self.connect()
+       
+            if conexion['status'] == True:
+              with self.conn.cursor() as cur :
+                  
+                    cur.execute(f"""
+                              INSERT INTO public.tazadollar (id, precio) VALUES('{tasa.id}', {tasa.precio});    
+                """)
+                    self.conn.commit()
+                
+                    return  ResponseInternal.responseInternal(True,f"consulta de ultima tasa Dollar BCV  realizada con exito ",tasa)
+            else:
+                   return ResponseInternal.responseInternal(False,"ERROR DE CONEXION A LA BASE DE DATOS...",None)
+      
+        except self.INTERFACE_ERROR as e :
+            Logs.WirterTask(f"{self.ERROR} error de interface {e}")
+            return ResponseInternal.responseInternal(False,"ERROR de interface en la base de datos ",None)
+        except self.DATABASE_ERROR as e:
+            Logs.WirterTask(f"{self.ERROR} error en la base de datos detail{e}")
+            return ResponseInternal.responseInternal(False,"ERROR EN LA BASE DE DATOS",None)
+        finally:
+            self.disconnect()
+            Logs.WirterTask("Finalizada la ejecucion de registros de productos ")
+               

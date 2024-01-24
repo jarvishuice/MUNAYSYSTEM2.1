@@ -1,7 +1,7 @@
 from core.Implements.auth.authDAO import AuthDAO
 from fastapi import APIRouter,Request,HTTPException,UploadFile,File,Response,Depends
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-from core.Implements.finance.tasaDollarDAO import TasaDollarDAO
+from core.Implements.finance.tasaDollarDAO import TasaDollarDAO,TasaDollarEntity
 
 core= TasaDollarDAO()
 security = HTTPBearer()
@@ -30,3 +30,12 @@ async def getTAsaDollar(auten:str=Depends(aut)):
        return respuesta
    else:
        raise HTTPException(400,trigger['mesagge'])
+@TasaDollar.post("/")
+async def updateTasa() -> TasaDollarEntity|bool :
+   trigger = core.updateTasa()
+   if trigger['status'] ==True:
+       respuesta= trigger['response']
+       return respuesta
+   else:
+       raise HTTPException(400,trigger['mesagge'])
+   
