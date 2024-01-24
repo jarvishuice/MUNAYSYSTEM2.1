@@ -9,6 +9,7 @@ class ItasaDollar(ABC):
     def tasaDollarLastRegister()-> float:
         pass
     @abstractmethod
-    def updateTasa()-> TasaDollarEntity|bool:
-        pass
+    def updateTasa()-> TasaDollarEntity|bool: ...
+
+    
 

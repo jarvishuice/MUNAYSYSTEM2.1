@@ -1,25 +1,29 @@
 
-
-
-
 import time
 from core.Interface.finance.ItazaDollar import ItasaDollar,TasaDollarEntity
 from core.config.ResponseInternal import ResponseInternal
 from config.Db.conectionsPsqlInterface import ConectionsPsqlInterface
 from providers.Services.finance import Finance
 from config.Logs.LogsActivity import Logs
-""" Esta clase es la encargada de gestiionar todo lo  referentes a llas operaciones que se realizararn con el wallet contemplando la tabla de pagos 
-esta complementa a wallet DAo 
-el atrubuto wallet es la implementacion de walletDAO donde esta toda la lohgiaca para insertar en  la tabla wallet 
 
-    """
 class TasaDollarDAO(ConectionsPsqlInterface,ItasaDollar):
-    finance = Finance()
+    """
+    Esta es la clase 'TasaDollarDAO'.
+
+    Argumentos:
+    ConectionsPsqlInterface (type): La interfaz de conexión para la base de datos PostgreSQL.
+    ItasaDollar (type): La interfaz para ItasaDollar.
+
+    Retorna:
+    type: El tipo de la clase.
+"""
+    
     def __init__(self):
-      \
+        self.finance = Finance()
         super().__init__()
     
     def tasaDollarLastRegister(self) -> float:
+        
         try:
             respuesta=0
             conexion=self.connect()
@@ -53,6 +57,11 @@ class TasaDollarDAO(ConectionsPsqlInterface,ItasaDollar):
             Logs.WirterTask("Finalizada la ejecucion de registros de productos ")
              
     def updateTasa(self)->TasaDollarEntity|bool: 
+        """_summary_
+
+        Returns:
+            :TasaDollarEntity|bool: _description_
+        """        
         try:
             precio = self.finance.getTasaBcv()
             if precio == False:
