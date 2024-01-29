@@ -4,7 +4,9 @@ class Finance:
     def __init__(self):
         pass
     def getTasaBcv(self):
+       
         """
+    
     Este método realiza una solicitud GET a la URL almacenada en self.__urlBCV.
 
     :returns: Si la solicitud es exitosa (código de estado 200), devuelve el precio del USD 
