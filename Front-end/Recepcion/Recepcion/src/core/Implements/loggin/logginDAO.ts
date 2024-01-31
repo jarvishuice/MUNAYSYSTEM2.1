@@ -2,6 +2,15 @@ import { PATHMUNAYSYSY } from "../../../Config/routes/pathsMuanaysys";
 import { UsersEntity } from "../../Entities/users/userEntity";
 import { Iloggin } from "../../Interfaces/Loggin/Ilogin";
 
+/**
+ * Description placeholder
+ * @date 31/1/2024 - 4:21:06 p. m.
+ *
+ * @export
+ * @class logginDAO
+ * @typedef {logginDAO}
+ * @implements {Iloggin}
+ */
 export class logginDAO implements Iloggin{
     private paths = new PATHMUNAYSYSY();
     private API = this.paths.PathAPI();
@@ -11,6 +20,14 @@ export class logginDAO implements Iloggin{
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${localStorage.getItem('token')}`
     };
+/**
+ * Cierre de seccion
+ * @date 31/1/2024 - 4:20:52 p. m.
+ *
+ * @async
+ * @param {UsersEntity} user
+ * @returns {Promise<boolean>}
+ */
 async logout(user: UsersEntity): Promise<boolean> {
    
     console.log(localStorage.getItem('user'));

@@ -4,6 +4,15 @@ import { PATHMUNAYSYSY } from "../../../../Config/routes/pathsMuanaysys";
 
 import { IMetricCoffeshop } from "../../../Interfaces/metric/coffeshop/IMetricCoffeshop";
 
+/**
+ * lectura de las metricas  del las ventas y pagos en el coffeshop
+ * @date 31/1/2024 - 4:21:24 p. m.
+ *
+ * @export
+ * @class MetricCoffeshopDAO
+ * @typedef {MetricCoffeshopDAO}
+ * @implements {IMetricCoffeshop}
+ */
 export class MetricCoffeshopDAO implements IMetricCoffeshop{
     private paths =  new PATHMUNAYSYSY()
     private API=  this.paths.PathAPI()
@@ -17,6 +26,14 @@ export class MetricCoffeshopDAO implements IMetricCoffeshop{
       console.log("nueva instancia de clientes ");
       this.paths = new PATHMUNAYSYSY();
     }
+    /**
+     * metricas por sede
+     * @date 31/1/2024 - 4:22:04 p. m.
+     *
+     * @async
+     * @param {string} sede
+     * @returns {Promise<MetricCoffeshopEntity|null>}
+     */
     async ExtraerMetricasBySede(sede:string): Promise<MetricCoffeshopEntity|null> {
         try{ 
             const response =await fetch(`${this.API}${this.prefijo}/${sede}`,{headers:this.headers,});
@@ -45,6 +62,14 @@ export class MetricCoffeshopDAO implements IMetricCoffeshop{
             }
        
    }
+
+   /**
+    * Metricas en general 
+    * @date 31/1/2024 - 4:22:25 p. m.
+    *
+    * @async
+    * @returns {Promise<MetricCoffeshopEntity|null>}
+    */
    async ExtraerMetricasGlobales(): Promise<MetricCoffeshopEntity|null> {
     try{ 
         const response =await fetch(`${this.API}${this.prefijo}/global`,{headers:this.headers,});

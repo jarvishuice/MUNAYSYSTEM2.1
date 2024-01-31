@@ -2,6 +2,15 @@ import { PATHMUNAYSYSY } from "../../../Config/routes/pathsMuanaysys";
 import { CuentasEntity } from "../../Entities/cuentas/cuentasEntity";
 import { ICuentas } from "../../Interfaces/Cuentas/Icuentas";
 
+/**
+ * gestro de las cuentas para realizar pagos 
+ * @date 31/1/2024 - 4:19:09 p. m.
+ *
+ * @export
+ * @class CuentasDAO
+ * @typedef {CuentasDAO}
+ * @implements {ICuentas}
+ */
 export class CuentasDAO implements ICuentas{
     private paths = new PATHMUNAYSYSY();
     private API = this.paths.PathAPI();
@@ -11,6 +20,14 @@ export class CuentasDAO implements ICuentas{
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${localStorage.getItem('token')}`
     }; 
+   /**
+    * extracion de las cuentas segun la sede 
+    * @date 31/1/2024 - 4:18:31 p. m.
+    *
+    * @async
+    * @param {String} sede
+    * @returns {Promise<CuentasEntity[]>}
+    */
    async  getCuentasBySede(sede: any): Promise<CuentasEntity[]> {
      
     try{ 

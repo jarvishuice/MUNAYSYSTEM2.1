@@ -1,6 +1,15 @@
 import { PATHMUNAYSYSY } from "../../../Config/routes/pathsMuanaysys";
 import { ItasaDollar } from "../../Interfaces/finance/ItasaDollar";
 
+/**
+ * gestioon de tasas del BCV
+ * @date 31/1/2024 - 4:20:18 p. m.
+ *
+ * @export
+ * @class TasaDollarDAO
+ * @typedef {TasaDollarDAO}
+ * @implements {ItasaDollar}
+ */
 export class TasaDollarDAO implements ItasaDollar{
     private paths =  new PATHMUNAYSYSY()
     private API=  this.paths.PathAPI()
@@ -10,6 +19,14 @@ export class TasaDollarDAO implements ItasaDollar{
     'Authorization': `Bearer ${localStorage.getItem('token')}`
 
     }
+
+    /**
+     * obtine la tas actual del BCV  proporcionada por el api 
+     * @date 31/1/2024 - 4:19:49 p. m.
+     *
+     * @async
+     * @returns {Promise<number>}
+     */
     async ObtenerTazaActual(): Promise<number> {
         try{ 
             const response =await fetch(`${this.API}${this.prefijo}/`,{headers:this.headers,});

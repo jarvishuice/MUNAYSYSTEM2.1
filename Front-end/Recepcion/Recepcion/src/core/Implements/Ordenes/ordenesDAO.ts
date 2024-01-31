@@ -3,6 +3,15 @@ import { ConsumoDetalladoEntity, OrdenesDetalladasEntity, OrdenesEntity } from "
 import { PedidosEntity } from "../../Entities/pedidos/pedidosEntity";
 import { IOrdenes } from "../../Interfaces/ordenes/Iordenes";
 
+/**
+ * GESTOR DE ORDENS
+ * @date 31/1/2024 - 4:22:48 p. m.
+ *
+ * @export
+ * @class OrdenesDAO
+ * @typedef {OrdenesDAO}
+ * @implements {IOrdenes}
+ */
 export class OrdenesDAO implements IOrdenes {
     private paths = new PATHMUNAYSYSY();
     private API = this.paths.PathAPI();
@@ -18,6 +27,15 @@ export class OrdenesDAO implements IOrdenes {
         this.paths = new PATHMUNAYSYSY();
     }
 
+    /**
+     * CREAR ORDENES 
+     * @date 31/1/2024 - 4:23:03 p. m.
+     *
+     * @async
+     * @param {OrdenesEntity} encabezado
+     * @param {PedidosEntity[]} items
+     * @returns {Promise<OrdenesEntity | null>}
+     */
     async crearOrden(encabezado: OrdenesEntity, items: PedidosEntity[]): Promise<OrdenesEntity | null> {
         const data = {
             ordenData:encabezado,
@@ -57,6 +75,15 @@ export class OrdenesDAO implements IOrdenes {
             return null;
         }
     }
+
+    /**
+     * oRDENES ABIERTAS DEL DIA 
+     * @date 31/1/2024 - 4:23:23 p. m.
+     *
+     * @async
+     * @param {string} sede
+     * @returns {Promise<OrdenesDetalladasEntity[] | null>}
+     */
     async ordenesToday(sede: string): Promise<OrdenesDetalladasEntity[] | null> {
         try {
             const response = await fetch(`${this.API}${this.prefijo}/today/${sede}`, {
@@ -91,6 +118,15 @@ export class OrdenesDAO implements IOrdenes {
             return null;
         }  
     }
+
+    /**
+     * coNSUMO DETALLADO DE UNA ORDEN 
+     * @date 31/1/2024 - 4:23:36 p. m.
+     *
+     * @async
+     * @param {string} idorden
+     * @returns {Promise<ConsumoDetalladoEntity[] | null>}
+     */
     async consumoDetallado(idorden: string): Promise<ConsumoDetalladoEntity[] | null> {
         try {
             const response = await fetch(`${this.API}${this.prefijo}/DETALLE/${idorden}`, {
