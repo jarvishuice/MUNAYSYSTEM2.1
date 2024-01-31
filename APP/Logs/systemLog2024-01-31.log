@@ -2146,3 +2146,30 @@
  [0;36m[2024-01-31 16:17:27.689746]:[0;32mConexión exitosa a la base de datos
  [0;36m[2024-01-31 16:17:27.704252]:[0;32mAbono registrado con exito!!! detail 
  [0;36m[2024-01-31 16:17:27.710086]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:24:42.000421]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:24:42.019353]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 16:24:42.025963]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:24:42.095003]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:24:42.118767]:[0;32mExxito a contar los id213.1
+ [0;36m[2024-01-31 16:24:42.125428]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:24:42.189951]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:24:42.285130]:[0;32mExxito a contar los id37.0
+ [0;36m[2024-01-31 16:24:42.287002]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:24:42.362008]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:24:42.382399]:[0;32mExxito a contar los id0
+ [0;36m[2024-01-31 16:24:42.389980]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:24:42.455272]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:24:42.480818]:[0;32mExxito a contar los id37.0
+ [0;36m[2024-01-31 16:24:42.482687]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:24:42.557462]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:24:42.576683]:[0;32mExxito a contar los id213.1
+ [0;36m[2024-01-31 16:24:42.581800]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:24:42.654606]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:24:42.676010]:[0;32mExxito a contar los id0
+ [0;36m[2024-01-31 16:24:42.681960]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:24:42.683465]:[0;32mmetricas extraidas con exito
+ [0;36m[2024-01-31 16:24:51.466294]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:24:51.513663]:[0;32mestatus de usuario cambiando con exito 
+ [0;36m[2024-01-31 16:24:51.519983]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:24:51.529843]:[0;32mseccion del usuarioid=2 nombre='jesus' apellido='Pacheco' ci='16301730' nombreusuario='Jesus' password='🖕' token='1706732175.4140394' status='activo' tipoUsuario=3 urlImagen='None' cerrada con exito
+ [0;36m[2024-01-31 16:24:51.533538]:[0;32mfinalizada la ejecuciondel del core cerrar seccion !!!!!
