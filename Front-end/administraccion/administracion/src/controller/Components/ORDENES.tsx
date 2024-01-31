@@ -116,7 +116,7 @@ return (
      
             <p className="nombreProducto">{items.nombre}.</p>
             <h6 className="card-title mt-4">CEDULA:{items.ci}</h6>
-           <center> <h4 className="card-title mt-4 ">{items.deuda}$ </h4></center>
+           <center> <h4 className="card-title mt-4 ">{items.deuda - items.abono}$ </h4></center>
             <h6>#ORDENES: {"\t"}{items.cantidadOrdenes}</h6>
             <center><button className='btn btn-primary mt-2' onClick={()=>{DETALLESDEUDAS(items.idCliente),props.detallesDeudor(detalles)}}> DETALLES</button></center>
           </div>
@@ -135,7 +135,7 @@ return (
     
            <p className="nombreProducto">{items.nombre}.</p>
            <h6 className="card-title mt-4">CEDULA:{items.ci}</h6>
-          <center> <h4 className="card-title mt-4 ">{items.deuda}$ </h4></center>
+          <center> <h4 className="card-title mt-4 ">{items.deuda - items.abono}$ </h4></center>
            <h6>#ORDENES: {"\t"}{items.cantidadOrdenes}</h6>
            <center><button className='btn btn-primary mt-2' onClick={()=>{DETALLESDEUDAS(items.idCliente),props.detallesDeudor(detalles)}}> DETALLES</button></center>
          </div>

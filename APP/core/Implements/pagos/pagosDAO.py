@@ -5,11 +5,13 @@ from core.config.ResponseInternal import ResponseInternal
 from config.Db.conectionsPsqlInterface import ConectionsPsqlInterface
 from core.test.clienteDataTest.clienteVAlidacion import CLientesVAlidacionData
 from core.Implements.wallet.walletDAO import WalletDAO,WalletEntity
+from core.Implements.Abonos.abonoDAO import AbonoDAO,AbonosEntity
 import time
 from config.Logs.LogsActivity import Logs
 from config.helpers.override import override
 class PagosDAO(ConectionsPsqlInterface,IPagos):
-    wallet=WalletDAO()
+    wallet = WalletDAO()
+    abonos = AbonoDAO()
     def __init__(self):
         super().__init__()
     def registrarPago(self,pagoData: PagosEntity) -> PagosEntity:
@@ -45,11 +47,11 @@ class PagosDAO(ConectionsPsqlInterface,IPagos):
             pagoData.motivo="Abono deuda coffeshop"
             pago=self.registrarPago(pagoData)
             if pago['status']==True:
-                wallet=self.wallet.reacargarWallet(WalletEntity(id=str(time.time()),idcliente=int(pagoData.idcliente),monto=float(pagoData.monto),idpago=str(pago['response'].id),status=str('aplicado')))
-                if wallet['status'] ==True:
+                abono=self.abononos.registrarAbono(AbonosEntity(id=str(time.time()),idCliente=int(pagoData.idcliente),idpago=str(pago['response'].id),status=str('aplicado'),monto=float(pagoData.monto),sede=pagoData.sede))
+                if abono['status'] ==True:
                     return ResponseInternal.responseInternal(True,"Abono registrado de anera correcta",pago['response'])
                 else:
-                    return ResponseInternal.responseInternal(False, wallet['mesagge'],None)
+                    return ResponseInternal.responseInternal(False, abono['mesagge'],None)
             else:
                 return ResponseInternal.responseInternal(False,pago['mesagge'],None) 
         finally:
@@ -57,14 +59,15 @@ class PagosDAO(ConectionsPsqlInterface,IPagos):
             Logs.WirterTask(" ha finalizado la ejecuscion del registro de abonos")
     def registroMultipago(self,pagoData:PagosEntity)->PagosEntity:
         try:
-            pagoData.motivo=f"Multipago coffeshop {pagoData.sede}"
+            pagoData.motivo=f" abono  coffeshop {pagoData.sede}"
             pago=self.registrarPago(pagoData)
             if pago['status']==True:
-                wallet=self.wallet.reacargarWallet(WalletEntity(id=str(time.time()),idcliente=int(pagoData.idcliente),monto=float(pagoData.monto),idpago=str(pago['response'].id),status=str('aplicado')))
-                if wallet['status'] ==True:
+                #registrando el abono
+                abono=self.abonos.registrarAbono(AbonosEntity(id=str(time.time()),idCliente=int(pagoData.idcliente),idPago=str(pago['response'].id),status=str('aplicado'),monto=float(pagoData.monto),sede=pagoData.sede))
+                if abono['status'] ==True:
                     return ResponseInternal.responseInternal(True,"Abono registrado de anera correcta",pago['response'])
                 else:
-                    return ResponseInternal.responseInternal(False, wallet['mesagge'],None)
+                    return ResponseInternal.responseInternal(False,abono['mesagge'],None)
             else:
                 return ResponseInternal.responseInternal(False,pago['mesagge'],None) 
         finally:

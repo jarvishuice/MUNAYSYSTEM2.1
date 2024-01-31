@@ -23,6 +23,7 @@ from controllers.api.router.metrics.metricsRouter import Metric
 from controllers.api.router.visitas.visitantesRouter import Visitantes
 from controllers.api.router.visitas.visitasRouter import Visitas
 from controllers.api.router.espacios.espaciosRouter import ESPACIOS
+from controllers.api.router.abonos.abonosRouter import ABONOS
 origins = ["*"]
 autenticacion=OAuth2PasswordBearer(tokenUrl="token")
 
@@ -36,6 +37,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+app.include_router(ABONOS)
 app.include_router(ESPACIOS)
 app.include_router(Visitantes)
 app.include_router(Visitas)

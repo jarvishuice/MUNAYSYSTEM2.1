@@ -7,6 +7,7 @@ class DeudaClienteCoffeShopEntity(BaseModel):
     nombre:str
     cantidadOrdenes:int
     deuda:float
+    abono:float
 
 class DetalleDedudaClientesEntity(BaseModel):
     fechaPedido:str   

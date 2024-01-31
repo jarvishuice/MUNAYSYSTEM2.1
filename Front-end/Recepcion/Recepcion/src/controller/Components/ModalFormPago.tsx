@@ -3,13 +3,13 @@
 import React, {useEffect, useState } from 'react';
 
 import '../../formPay.css'
-import { WalletDAO } from '../../core/Implements/wallet/walletDAO';
 import { TasaDollarDAO } from '../../core/Implements/finance/tasaDollarDAO';
 import { CuentasEntity } from '../../core/Entities/cuentas/cuentasEntity';
 import { CuentasDAO } from '../../core/Implements/Cuentas/cuentasDAO';
 import { PagosEntity } from '../../core/Entities/pagos/pagosEntity';
 import { PagosDAO } from '../../core/Implements/pagos/pagosDAO';
 import { DeudasClientesDAO } from '../../core/Implements/clients/deudasClientesDAO';
+import { AbonosDAO } from '../../core/Implements/abonos/abonosDAO'
 
 export function ModalFormPago(props:any){
 const sede= localStorage.getItem('sede')??'cfm'
@@ -17,21 +17,21 @@ const reinicio=()=>{fecthWallet()}
 //estado wallet 
 async function fecthWallet() {
   try {
-      const controladorWallet = new WalletDAO();
-      const data = await controladorWallet.consultasaldoWallet(props.cliente.idCliente);
-      setWallet(data);
+      const controladorAbonos = new AbonosDAO();
+      const data = await controladorAbonos.consultasaldoAbono(props.cliente.idCliente);
+      setAbono(data);
     } catch (error) {
       console.error(error);
     }
 }
 fecthWallet();
-const[wallet,setWallet] = useState<number>(0);
+const[abono,setAbono] = useState<number>(0);
 useEffect (()=>{
   async function fecthWallet() {
       try {
-          const controladorWallet = new WalletDAO();
-          const data = await controladorWallet.consultasaldoWallet(props.cliente.idCliente);
-          setWallet(data);
+        const controladorAbonos = new AbonosDAO();
+        const data = await controladorAbonos.consultasaldoAbono(props.cliente.idCliente);
+          setAbono(data);
         } catch (error) {
           console.error(error);
         }
@@ -89,17 +89,18 @@ async function Multipago (pagoData:PagosEntity){
 }
 //funcion para saldar deudas de los clientes
 async function SaldarDeudas(Rwallet:number,Dwallet:number,pago:PagosEntity) {
-  if(montoValue > props.cliente.deuda - wallet){
-    const  x=confirm(`El cliente desea abonar ${ montoValue -(props.cliente.deuda - wallet)} `)
+  if(montoValue > props.cliente.deuda - abono){
+    const  x=confirm(`El cliente desea abonar ${ montoValue -(props.cliente.deuda - abono)} `)
     if (x===true){
       pago.monto=montoValue;
-    Rwallet=montoValue -(props.cliente.deuda - wallet)}
+    Rwallet=montoValue -(props.cliente.deuda - abono)}
     else{
     Rwallet=0
-     pago.monto=props.cliente.deuda - wallet
-     Dwallet=wallet
+     pago.monto=props.cliente.deuda - abono
+     Dwallet=abono
     }
   }   
+    
   
 
   try{
@@ -119,7 +120,7 @@ async function SaldarDeudas(Rwallet:number,Dwallet:number,pago:PagosEntity) {
 }
 //
 //estado para extraer el  monto de pago
-const [montoValue, setMontoValue] = useState<number >(props.cliente.deuda - wallet);
+const [montoValue, setMontoValue] = useState<number >(props.cliente.deuda - abono);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setMontoValue(parseFloat(e.target.value));
@@ -139,6 +140,11 @@ const [fpago,setFPago]= useState<number>(1);
 const [ERferencia,setEReferencia]=useState<string>(' ')
 const handleChangeReferencia=(e:React.ChangeEvent<HTMLInputElement>)=>{
 setEReferencia(e.target.value)
+}
+function restablecer(){
+  setEReferencia('');
+  setMontoValue(0);
+  
 }
 //
 
@@ -162,8 +168,8 @@ if (!props.isOpen) return null;
                 
                 </div>
                 <div className="item">
-                  <span className="price">${wallet.toFixed(2)}</span>
-                  <p className="item-name">Wallet </p>
+                  <span className="price">${abono.toFixed(2)}</span>
+                  <p className="item-name">Abonado </p>
                   
                 </div>
                 <div className="item">
@@ -176,14 +182,14 @@ if (!props.isOpen) return null;
                   <p className="item-name">TasaBCV </p>
                   
                 </div>
-                <div className="total">Total A pagar Bs<span className="price">Bs.{((props.cliente.deuda - wallet) * tasa).toFixed(2)}</span></div>
-                <div className="total">Total A pagar <span className="price">${(props.cliente.deuda - wallet).toFixed(2)}</span></div>
+                <div className="total">Total A pagar Bs<span className="price">Bs.{((props.cliente.deuda - abono) * tasa).toFixed(2)}</span></div>
+                <div className="total">Total A pagar <span className="price">${(props.cliente.deuda - abono).toFixed(2)}</span></div>
               </div>
               <div className="card-details">
                 <h3 className="title">Informacion de pago</h3>
                 <div className="row">
                   <div className="form-group col-sm-7">
-                    <label htmlFor="card-holder"> forma de pago</label>
+                    <label htmlFor="card-holder"> Forma de pago</label>
                     <select id="card-holder" value={fpago} onChange={handleChangefpago} className="form-control" placeholder="Card Holder" aria-label="Card Holder" aria-describedby="basic-addon1">
                     {payForm.map((items=>(
                         <option value={items.id}>{items.metodo}</option>
@@ -197,11 +203,11 @@ if (!props.isOpen) return null;
                   </div>
                   <div className="form-group col-sm-4">
                     <label htmlFor="cvc" >Monto</label>
-                    <input id="cvc" type="number"  step="0.01" value={montoValue} onChange={handleChange}  placeholder={`${props.cliente.deuda - wallet}`} className="form-control" aria-label="Card Holder" aria-describedby="basic-addon1"/>
+                    <input id="cvc" type="number"  step="0.01" value={montoValue} onChange={handleChange}  placeholder={`${props.cliente.deuda - abono}`} className="form-control" aria-label="Card Holder" aria-describedby="basic-addon1"/>
                   </div>
                   
-                    <button type="button" className={"btn  btn-success "} disabled={(montoValue >= props.cliente.deuda - wallet)?false:true} onClick={()=>{
-                        SaldarDeudas(0,wallet,{id:'f',
+                    <button type="button" className={"btn  btn-success "} disabled={(montoValue >= props.cliente.deuda - abono)?false:true} onClick={()=>{
+                        SaldarDeudas(0,abono,{id:'f',
                         fecha:"f",
                         monto:montoValue,
                         motivo:"pago",
@@ -215,7 +221,7 @@ if (!props.isOpen) return null;
                         });
                     }}>Pagar</button>
                     
-                    <button type="button" className={"btn btn-warning "} disabled={montoValue < (props.cliente.deuda - wallet) ?false:true} onClick={()=>{Multipago({
+                    <button type="button" className={"btn btn-warning "} disabled={montoValue < (props.cliente.deuda - abono) ?false:true} onClick={()=>{Multipago({
                         id:"f",
                         fecha:"f",
                         monto:montoValue??0.0,
@@ -228,7 +234,7 @@ if (!props.isOpen) return null;
 
 
 
-                    }),reinicio()}}>MultiPago</button>
+                    }),reinicio(),restablecer()}}>Abonos</button>
                     <button type="button" onClick={props.onClose} className="btn btn-danger">Cerrar</button>
 
                 </div>

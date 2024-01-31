@@ -7,29 +7,68 @@ from core.test.clienteDataTest.clienteVAlidacion import CLientesVAlidacionData
 from core.Implements.pagos.pagosDAO import PagosDAO
 from core.Implements.pagos.pagosWalletDAO import PagosWalletDAO
 from core.Implements.wallet.walletDAO import WalletDAO,WalletEntity
+from core.Implements.Abonos.abonoDAO import AbonoDAO,AbonosEntity
 import time
 from config.Logs.LogsActivity import Logs
 class DeudaCientesDAO(ConectionsPsqlInterface,IDedudaClientes):
+    """_summary_
+
+    Args:
+        ConectionsPsqlInterface (_type_): Conector a la base de datos
+        IDedudaClientes (_type_): Interface  de deudas clientes
+    """    """
+    """
     def __init__(self):
         super().__init__()
+    #modulo de pagos
     integracionPagos=PagosDAO()
+
+    
+    #modulo de wallet
     integracionWalletPagos=PagosWalletDAO()
+   
+    #modulo de wallet
     integracionWallet=WalletDAO()
+    #modulo de integraciones
+    integracionAbono= AbonoDAO()
     def getDeudasClientesBySede(self,sede) -> list[DeudaClienteCoffeShopEntity]:
+        """ obtener la deuda de los clientes
+        Args:
+            sede (_type_): _description_
+
+        Returns:
+            list[DeudaClienteCoffeShopEntity]: _description_
+             """
+        
         try:
             conection= self.connect()  
             data=[]
 
             if conection['status']==True:
                 with self.conn.cursor() as cur :
-                    cur.execute(f"""select sum (o.total) as deuda,count(o.total) as cantidad_ordenes,c.nombre,c.id,c.ci from  ordenes o
-inner join clientes c on c.nombre=c.nombre and c.id=c.id and c.ci =c.ci
-where o.status ='por pagar' and o.sede='{sede}' and c.id=o.idcliente  
-group by c.nombre ,c.id""")
+                    #cur.execute(f"""select sum (o.total) as deuda,count(o.total) as cantidad_ordenes,c.nombre,c.id,c.ci from  ordenes o
+#inner join clientes c on c.nombre=c.nombre and c.id=c.id and c.ci =c.ci
+#where o.status ='por pagar' and o.sede='{sede}' and c.id=o.idcliente  
+#group by c.nombre ,c.id""")
+                    cur.execute(f""" SELECT SUM(o.total) AS deuda, COUNT(o.total) AS cantidad_ordenes,
+                                    c.nombre,
+                                    c.id,
+                                    c.ci,
+                                    (SELECT COALESCE(SUM(a.monto), 0) FROM abonos a WHERE a.idcliente = c.id AND a.sede = '{sede}') AS saldo
+                                    FROM 
+                                    ordenes o
+                                    INNER JOIN 
+                                    clientes c ON c.id = o.idcliente
+                                    WHERE 
+                                    o.status = 'por pagar' AND o.sede = '{sede}'
+   
+                                    GROUP BY 
+                                    c.nombre, c.id, c.ci
+                                    order by c.nombre asc;""")
                     count=cur.rowcount
                     if count > 0:
                         for i in cur:
-                            data.append(DeudaClienteCoffeShopEntity(idCliente=int(i[3]),ci=str(i[4]),nombre=str(i[2]),cantidadOrdenes=int(i[1]),deuda=float(i[0])))     
+                            data.append(DeudaClienteCoffeShopEntity(idCliente=int(i[3]),ci=str(i[4]),nombre=str(i[2]),cantidadOrdenes=int(i[1]),deuda=float(i[0]),abono=float(i[5])))     
                         return ResponseInternal.responseInternal(True,f"se ecncontraron ({count}) deudas  en la sede {sede} .....!" ,data)
                     else:
                         return ResponseInternal.responseInternal(True,f"{self.NOTE}:No se encontraron ordenes por pagar  del cliente ",data)
@@ -82,7 +121,19 @@ group by c.nombre ,p.idorden,i.nombre,p.cantidad,p.total,o.fechapedido;
             
             self.disconnect()
     def closeDeudaClientBySede(self,pago: PagosEntity, Rwallet: float,Dwallet: float) -> PagosEntity:
-    
+        """_summary_
+
+        Args:
+            pago (PagosEntity): Entdad de pago
+            Rwallet (float): monto a recaragar en wallet
+            Dwallet (float): monto a decortar en abono
+
+        Returns:
+            PagosEntity: entifidade de registro de pago
+        """        """
+        """
+        if Dwallet > 0:
+            Dwallet = Dwallet * -1
         try:
             conexion= self.connect()
             if conexion['status'] ==True:       
@@ -91,9 +142,9 @@ group by c.nombre ,p.idorden,i.nombre,p.cantidad,p.total,o.fechapedido;
                
                rPago=self.integracionPagos.registrarPago(pago)
                if rPago['status']==True:
-                   walletDescuento=self.integracionWallet.descuentowallet(WalletEntity(id=str('x'),idcliente=int(pago.idcliente),monto=float(Dwallet),idpago=str(rPago['response'].id),status=str('aplicado')))
+                   abonoDescuento=self.integracionAbono.registrarAbono(AbonosEntity(id=str('x'),idCliente=int(pago.idcliente),idPago=str(rPago['response'].id),status= str("aplicado").upper(),monto=float(Dwallet),sede=str(rPago['response'].sede)))
                    walletRecarga=self.integracionWallet.reacargarWallet(WalletEntity(id=str('x'),idcliente=int(pago.idcliente),monto=float(Rwallet),idpago=str(rPago['response'].id),status=str('aplicado')))
-                   if walletRecarga['status']==True and walletDescuento['status'] ==True:
+                   if walletRecarga['status']==True and abonoDescuento['status'] ==True:
                        self.__statusByDeudabyClientebySede__(rPago['response'].id,pago.sede,pago.idcliente)
                        return ResponseInternal.responseInternal(True,"exito al cancelar ls ordenes de los clientes",rPago['response'])               
                    else:

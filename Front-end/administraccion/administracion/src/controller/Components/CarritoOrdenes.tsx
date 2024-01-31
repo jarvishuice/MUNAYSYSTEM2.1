@@ -49,7 +49,7 @@ export function CarritoOrdenes(props:any){
 
         </h4>
          <center> <h4 className="d-flex  justify-content-between align-items-center mb-2">
-          <span className="badge  align-items-center  rounded-pill">Total:{props.deudor.deuda}$</span>
+          <span className="badge  align-items-center  rounded-pill">Total:{props.deudor.deuda-props.deudor.abono}$</span>
           </h4></center>
           <ul className="list-group mb-3 scrollCarrito">
        {props.detalles.map((items:DetalleDeudaCliente)=>(

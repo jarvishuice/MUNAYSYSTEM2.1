@@ -22,7 +22,7 @@ const [detalles, setDetalles] = useState<DetalleDeudaCliente[]>([]);
 
 //==================================================================
   // Estado selector del deudor
-  const [deudor, setDeudor] = useState<DeudaClientesEntity>({ idCliente: 8, ci: "0000000", nombre: "seleccione un cliente", cantidadOrdenes: 0, deuda: 0 });
+  const [deudor, setDeudor] = useState<DeudaClientesEntity>({ idCliente: 8, ci: "0000000", nombre: "seleccione un cliente", cantidadOrdenes: 0, deuda: 0 ,abono: 0});
 
   const SelectDeudor = (DEUDOR: DeudaClientesEntity) => {
  
