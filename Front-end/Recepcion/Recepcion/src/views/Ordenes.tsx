@@ -5,6 +5,13 @@ import { ModalFormPago } from "../controller/Components/ModalFormPago";
 import { Ordenes } from "../controller/Components/ORDENES";
 import { CarritoOrdenes } from "../controller/Components/CarritoOrdenes";
 
+/**
+ * Description placeholder
+ * @date 31/1/2024 - 2:17:32 p. m.
+ *
+ * @export
+ * @returns {JSX.Element}
+ */
 export function ORDENES() {
   //const sede = localStorage.getItem('sede') ?? 'por favor inicie sesión para poder crear una orden';
 /**

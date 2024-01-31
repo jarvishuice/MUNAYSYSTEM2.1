@@ -7,6 +7,14 @@ export function Ordenes(props:any){
   const sede = localStorage.getItem('sede') ?? 'por favor inicie sesión para poder crear una orden';
 const [deudas,setDeudas]= useState<DeudaClientesEntity[]>([]);
 
+
+/**
+ * Extrae las deudas del clientes 
+ * @date 31/1/2024 - 3:31:05 p. m.
+ *
+ * @async
+ * @returns {*}
+ */
 async function fecthDeuda() {
       try {
           const ControladorDeudas = new DeudasClientesDAO();
@@ -63,6 +71,12 @@ const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     };
  const [clientes,setClientes]  =useState<DeudaClientesEntity[]>(deudas)
  useEffect(()=>{
+  /**
+   * busqueda del cliente
+   * @date 31/1/2024 - 3:31:37 p. m.
+   *
+   * @param {string} nombe
+   */
   function filtarCliente(nombe:string) {
     if(nombre === ""){
 setClientes(deudas)
@@ -116,7 +130,7 @@ return (
      
             <p className="nombreProducto">{items.nombre}.</p>
             <h6 className="card-title mt-4">CEDULA:{items.ci}</h6>
-           <center> <h4 className="card-title mt-4 ">{items.deuda}$ </h4></center>
+           <center> <h4 className="card-title mt-4 ">{items.deuda - items.abono}$ </h4></center>
             <h6>#ORDENES: {"\t"}{items.cantidadOrdenes}</h6>
             <center><button className='btn btn-primary mt-2' onClick={()=>{DETALLESDEUDAS(items.idCliente),props.detallesDeudor(detalles)}}> DETALLES</button></center>
           </div>
@@ -135,7 +149,7 @@ return (
     
            <p className="nombreProducto">{items.nombre}.</p>
            <h6 className="card-title mt-4">CEDULA:{items.ci}</h6>
-          <center> <h4 className="card-title mt-4 ">{items.deuda}$ </h4></center>
+          <center> <h4 className="card-title mt-4 ">{items.deuda - items.abono}$ </h4></center>
            <h6>#ORDENES: {"\t"}{items.cantidadOrdenes}</h6>
            <center><button className='btn btn-primary mt-2' onClick={()=>{DETALLESDEUDAS(items.idCliente),props.detallesDeudor(detalles)}}> DETALLES</button></center>
          </div>

@@ -1760,3 +1760,389 @@
  [0;36m[2024-01-31 13:21:44.310897]:[0;32mordenes de la sede cfm extraida con exito 
  [0;36m[2024-01-31 13:21:44.318153]:[0;32mFinalida la lectura de las ordenes de la sede {sede}
  [0;36m[2024-01-31 13:21:44.325971]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 13:54:43.640010]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 13:54:43.649756]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 13:54:43.651556]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 13:54:43.835682]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 13:54:43.852399]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 13:54:43.858141]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 13:54:44.073951]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 13:54:44.113847]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 13:54:44.118562]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 13:54:44.206076]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 13:54:44.252492]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 13:54:44.274011]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 13:54:44.297809]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 13:54:44.305054]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 13:54:44.329715]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 13:54:44.331511]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 13:54:44.346762]:[0;32mBusqueda de plan de cuentas en la sede cfm se encontraron (11) coincidencias
+ [0;36m[2024-01-31 13:54:44.352325]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 13:54:44.362350]:[0;32mFinalizada la ejecucion de registros de productos 
+ [0;36m[2024-01-31 13:54:44.448407]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 13:54:44.461082]:[0;32mconsulta de ultima tasa Dollar BCV  realizada con exito 
+ [0;36m[2024-01-31 13:54:44.466214]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 13:54:44.470155]:[0;32mFinalizada la ejecucion de registros de productos 
+ [0;36m[2024-01-31 13:54:44.541764]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 13:54:44.587209]:[0;32mse ecncontraron (19) deudas  en la sede cfm .....!
+ [0;36m[2024-01-31 13:54:44.600158]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 13:54:44.718228]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 13:54:44.745415]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 13:54:44.750280]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 13:54:44.832996]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 13:54:44.884395]:[0;32mse ecncontraron (2) de pedidos  en la sede cfm del cliente 8 .....!
+ [0;36m[2024-01-31 13:54:44.890008]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 13:54:44.970672]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 13:54:44.985123]:[0;32mConsulta de saldo exitosa del cliente (8) su saldo es 0E-16
+ [0;36m[2024-01-31 13:54:44.987083]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 13:54:45.066227]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 13:54:45.080204]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 13:54:45.085978]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 13:54:45.216356]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 13:54:45.233107]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 13:54:45.241965]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 13:54:45.422558]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 13:54:45.435835]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 13:54:45.442194]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:03.321818]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:03.338488]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 14:01:03.345935]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:03.412145]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:03.434071]:[0;32mBusqueda de producto (cafe) se encontraron (15) coincidencias
+ [0;36m[2024-01-31 14:01:03.441986]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:03.450255]:[0;32mFinalizada la ejecucion de registros de productos 
+ [0;36m[2024-01-31 14:01:03.573802]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:03.597554]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 14:01:03.607323]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:03.673049]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:03.690512]:[0;32mConsulta de saldo exitosa del cliente (8) su saldo es 0E-16
+ [0;36m[2024-01-31 14:01:03.696333]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:03.828640]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:03.845748]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:03.875358]:[0;32mBusqueda de producto de la categoria  (cafe) se encontraron (12) coincidencias
+ [0;36m[2024-01-31 14:01:03.879916]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 14:01:03.885942]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:03.890079]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:03.901670]:[0;32mFinalizada la busqueda de productos por categoria 
+ [0;36m[2024-01-31 14:01:04.008992]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:04.041758]:[0;32mBusqueda del cliente [contado] realizada con exito s eencotraron 1 coincidencas
+ [0;36m[2024-01-31 14:01:04.049975]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:10.323823]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:10.349763]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 14:01:10.358107]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:10.427142]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:10.442707]:[0;32mconsulta de ultima tasa Dollar BCV  realizada con exito 
+ [0;36m[2024-01-31 14:01:10.449977]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:10.451346]:[0;32mFinalizada la ejecucion de registros de productos 
+ [0;36m[2024-01-31 14:01:10.732562]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:10.745968]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 14:01:10.750061]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:10.819433]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:10.836090]:[0;32mBusqueda de producto (cafe) se encontraron (15) coincidencias
+ [0;36m[2024-01-31 14:01:10.845975]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:10.850221]:[0;32mFinalizada la ejecucion de registros de productos 
+ [0;36m[2024-01-31 14:01:11.293631]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:11.309019]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 14:01:11.317946]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:11.386733]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:11.407610]:[0;32mBusqueda de producto de la categoria  (cafe) se encontraron (12) coincidencias
+ [0;36m[2024-01-31 14:01:11.414148]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:11.422563]:[0;32mFinalizada la busqueda de productos por categoria 
+ [0;36m[2024-01-31 14:01:11.621931]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:11.636985]:[0;32mConsulta de saldo exitosa del cliente (8) su saldo es 0E-16
+ [0;36m[2024-01-31 14:01:11.642105]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:11.711652]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:11.726921]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 14:01:11.734247]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:11.801008]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:11.830723]:[0;32mBusqueda del cliente [contado] realizada con exito s eencotraron 1 coincidencas
+ [0;36m[2024-01-31 14:01:11.837980]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:15.961319]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:15.974782]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 14:01:15.981556]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:16.048380]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:16.084961]:[0;32mBusqueda del cliente [alberto] realizada con exito s eencotraron 11 coincidencas
+ [0;36m[2024-01-31 14:01:16.099748]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:28.492639]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:28.508068]:[0;32mConsulta de saldo exitosa del cliente (111) su saldo es 0
+ [0;36m[2024-01-31 14:01:28.514040]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:29.565556]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:29.578993]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 14:01:29.580821]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:29.658527]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:29.684491]:[0;32mBusqueda del cliente [gonzales] realizada con exito s eencotraron 2 coincidencas
+ [0;36m[2024-01-31 14:01:29.686315]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:37.187072]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:37.200524]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 14:01:37.202322]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:37.274912]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:37.302974]:[0;32mBusqueda del cliente [gon] realizada con exito s eencotraron 33 coincidencas
+ [0;36m[2024-01-31 14:01:37.309978]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:57.075195]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:57.088705]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 14:01:57.093943]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 14:01:57.160856]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 14:01:57.348048]:[0;32mBusqueda del cliente [al] realizada con exito s eencotraron 327 coincidencas
+ [0;36m[2024-01-31 14:01:57.358057]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:10:31.071839]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:10:31.217724]:[0;32mNO se ha encontrado ningun  usuario ({username})
+ [0;36m[2024-01-31 16:10:31.225989]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:10:31.231374]:[0;32mNO se ha encontrado ningun  usuario ({username})
+ [0;36m[2024-01-31 16:10:31.235340]:[0;32mculminado la ejecucion de inicio de seccion LoginDAO
+ [0;36m[2024-01-31 16:10:37.944642]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:10:37.962470]:[0;32musuario contado con exito con exito !!!
+ [0;36m[2024-01-31 16:10:37.969991]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:10:37.986312]:[0;32musuario o contrasena errada por favor validelos
+ [0;36m[2024-01-31 16:10:38.069793]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:10:38.153702]:[0;32mestatus de usuario cambiando con exito 
+ [0;36m[2024-01-31 16:10:38.162023]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:10:38.238086]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:10:38.342133]:[0;32mtoken del usuario Jesus con exito 
+ [0;36m[2024-01-31 16:10:38.350021]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:10:38.354575]:[0;32m El usuario Jesus ha iniciado seccion correctamente
+ [0;36m[2024-01-31 16:10:38.360080]:[0;32mculminado la ejecucion de inicio de seccion LoginDAO
+ [0;36m[2024-01-31 16:10:43.427460]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:10:43.449992]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 16:10:43.455749]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:10:43.537747]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:10:43.554876]:[0;32mconsulta de ultima tasa Dollar BCV  realizada con exito 
+ [0;36m[2024-01-31 16:10:43.562457]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:10:43.570249]:[0;32mFinalizada la ejecucion de registros de productos 
+ [0;36m[2024-01-31 16:10:43.805923]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:10:43.821744]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 16:10:43.833962]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:10:43.917777]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:10:43.980098]:[0;32mBusqueda de producto (cafe) se encontraron (15) coincidencias
+ [0;36m[2024-01-31 16:10:44.004133]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:10:44.006268]:[0;32mFinalizada la ejecucion de registros de productos 
+ [0;36m[2024-01-31 16:10:44.145971]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:10:44.161770]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 16:10:44.169959]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:10:44.249748]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:10:44.271290]:[0;32mBusqueda de producto de la categoria  (cafe) se encontraron (12) coincidencias
+ [0;36m[2024-01-31 16:10:44.288574]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:10:44.298881]:[0;32mFinalizada la busqueda de productos por categoria 
+ [0;36m[2024-01-31 16:10:44.499884]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:10:44.517747]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 16:10:44.531993]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:10:44.593500]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:10:44.628668]:[0;32mBusqueda del cliente [contado] realizada con exito s eencotraron 1 coincidencas
+ [0;36m[2024-01-31 16:10:44.637997]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:10:44.741871]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:10:44.807259]:[0;32mConsulta de saldo exitosa del cliente (8) su saldo es 0E-16
+ [0;36m[2024-01-31 16:10:44.823417]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:15.266335]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:15.280517]:[0;32musuario contado con exito con exito !!!
+ [0;36m[2024-01-31 16:16:15.286141]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:15.290825]:[0;32musuario o contrasena errada por favor validelos
+ [0;36m[2024-01-31 16:16:15.352635]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:15.404862]:[0;32mestatus de usuario cambiando con exito 
+ [0;36m[2024-01-31 16:16:15.410081]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:15.477003]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:15.493771]:[0;32mtoken del usuario Jesus con exito 
+ [0;36m[2024-01-31 16:16:15.501968]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:15.503441]:[0;32m El usuario Jesus ha iniciado seccion correctamente
+ [0;36m[2024-01-31 16:16:15.512492]:[0;32mculminado la ejecucion de inicio de seccion LoginDAO
+ [0;36m[2024-01-31 16:16:18.870345]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:18.884277]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 16:16:18.888995]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:18.959501]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:18.971345]:[0;32mconsulta de ultima tasa Dollar BCV  realizada con exito 
+ [0;36m[2024-01-31 16:16:18.986077]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:18.988003]:[0;32mFinalizada la ejecucion de registros de productos 
+ [0;36m[2024-01-31 16:16:19.228521]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:19.241757]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 16:16:19.245937]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:19.321691]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:19.343858]:[0;32mBusqueda de producto (cafe) se encontraron (15) coincidencias
+ [0;36m[2024-01-31 16:16:19.357977]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:19.359012]:[0;32mFinalizada la ejecucion de registros de productos 
+ [0;36m[2024-01-31 16:16:19.621792]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:19.643516]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 16:16:19.645150]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:19.763972]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:19.778568]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:19.787744]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 16:16:19.793776]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:19.825972]:[0;32mBusqueda de producto de la categoria  (cafe) se encontraron (12) coincidencias
+ [0;36m[2024-01-31 16:16:19.834184]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:19.838519]:[0;32mFinalizada la busqueda de productos por categoria 
+ [0;36m[2024-01-31 16:16:19.925908]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:19.954861]:[0;32mBusqueda del cliente [contado] realizada con exito s eencotraron 1 coincidencas
+ [0;36m[2024-01-31 16:16:19.961976]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:20.455749]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:20.474551]:[0;32mConsulta de saldo exitosa del cliente (8) su saldo es 0E-16
+ [0;36m[2024-01-31 16:16:20.482687]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:31.584773]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:31.600412]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 16:16:31.606021]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:31.676366]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:31.698428]:[0;32mBusqueda de producto (cafe) se encontraron (15) coincidencias
+ [0;36m[2024-01-31 16:16:31.705022]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:31.716508]:[0;32mFinalizada la ejecucion de registros de productos 
+ [0;36m[2024-01-31 16:16:31.834088]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:31.849910]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 16:16:31.858236]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:31.921662]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:31.945098]:[0;32mBusqueda de producto de la categoria  (cafe) se encontraron (12) coincidencias
+ [0;36m[2024-01-31 16:16:31.957950]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:31.959269]:[0;32mFinalizada la busqueda de productos por categoria 
+ [0;36m[2024-01-31 16:16:32.064569]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:32.081461]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 16:16:32.091002]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:32.162931]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:32.192483]:[0;32mBusqueda del cliente [contado] realizada con exito s eencotraron 1 coincidencas
+ [0;36m[2024-01-31 16:16:32.198052]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:32.273455]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:32.289242]:[0;32mConsulta de saldo exitosa del cliente (8) su saldo es 0E-16
+ [0;36m[2024-01-31 16:16:32.295755]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:44.717752]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:44.731695]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:16:44.737785]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:44.946160]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:44.957396]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:16:44.959337]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:45.220109]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:45.239828]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 16:16:45.245932]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:45.316838]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:45.331094]:[0;32mBusqueda de plan de cuentas en la sede cfm se encontraron (11) coincidencias
+ [0;36m[2024-01-31 16:16:45.338383]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:45.349539]:[0;32mFinalizada la ejecucion de registros de productos 
+ [0;36m[2024-01-31 16:16:45.474808]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:45.514411]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 16:16:45.516168]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:45.572529]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:45.610426]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 16:16:45.621945]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:45.649760]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:45.696994]:[0;32mse ecncontraron (19) deudas  en la sede cfm .....!
+ [0;36m[2024-01-31 16:16:45.720351]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:45.813636]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:45.830012]:[0;32mconsulta de ultima tasa Dollar BCV  realizada con exito 
+ [0;36m[2024-01-31 16:16:45.837979]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:45.839292]:[0;32mFinalizada la ejecucion de registros de productos 
+ [0;36m[2024-01-31 16:16:45.929737]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:45.961736]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 16:16:45.963581]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:45.997763]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:46.012516]:[0;32mConsulta de saldo exitosa del cliente (8) su saldo es 0E-16
+ [0;36m[2024-01-31 16:16:46.017997]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:46.109634]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:46.169707]:[0;32mse ecncontraron (2) de pedidos  en la sede cfm del cliente 8 .....!
+ [0;36m[2024-01-31 16:16:46.181987]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:46.306141]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:46.321191]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:16:46.322985]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:46.407793]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:46.421128]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:16:46.422941]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:46.530252]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:46.543663]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:16:46.549990]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:46.656832]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:46.675539]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:16:46.686425]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:52.300008]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:52.315670]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 16:16:52.320817]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:52.396943]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:52.450395]:[0;32mse ecncontraron (3) de pedidos  en la sede cfm del cliente 38 .....!
+ [0;36m[2024-01-31 16:16:52.456430]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:52.624612]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:52.645768]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:16:52.658051]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:52.755766]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:52.773794]:[0;32mConsulta de saldo exitosa del cliente (38) su saldo es 0.0099999999999996
+ [0;36m[2024-01-31 16:16:52.783898]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:52.923844]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:52.943013]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:16:52.950453]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:53.041539]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:53.059163]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:16:53.066060]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:53.185675]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:53.203145]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:16:53.207495]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:57.751648]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:57.765508]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:16:57.770046]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:16:57.951090]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:16:57.964395]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:16:57.966249]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:02.588308]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:02.606083]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:02.614106]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:02.725785]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:02.743931]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:02.750134]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:03.063536]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:03.077083]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:03.082034]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:03.162230]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:03.178865]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:03.186499]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:03.396613]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:03.413353]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:03.417983]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:03.634548]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:03.655390]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:03.660643]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:04.606416]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:04.619824]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:04.626885]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:04.754035]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:04.767113]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:04.773949]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:06.052864]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:06.073870]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:06.081034]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:06.281801]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:06.299613]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:06.306208]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:06.718544]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:06.736891]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:06.742077]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:06.827230]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:06.841123]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:06.842866]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:06.970698]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:06.982868]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:06.984657]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:07.969843]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:07.993767]:[0;32mtoken validado con exito!!!
+ [0;36m[2024-01-31 16:17:08.009982]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:08.071995]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:08.088846]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:08.101881]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:08.180532]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:08.237281]:[0;32mpago regiustrado de manera satisfactoira 1706732228.1813571
+ [0;36m[2024-01-31 16:17:08.242094]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:08.246096]:[0;32mfinalizado el registro del pago 1706732228.1813571
+ [0;36m[2024-01-31 16:17:08.316481]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:08.341626]:[0;32mAbono registrado con exito!!! detail [id=1706732228.2470517 idCliente=38 idPago='1706732228.1813571' status='aplicado' monto=0.99 sede='cfm']
+ [0;36m[2024-01-31 16:17:08.352005]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:08.354136]:[0;32mAbono registrado de anera correcta
+ [0;36m[2024-01-31 16:17:08.357657]:[0;32m[0;33mno tiene conexion aperturada en estos monetos 
+ [0;36m[2024-01-31 16:17:08.361766]:[0;32m ha finalizado la ejecuscion del registro de abonos
+ [0;36m[2024-01-31 16:17:08.453644]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:08.469652]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:08.473979]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:08.705332]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:08.721020]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:08.722812]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:10.273697]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:10.288563]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:10.290402]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:10.473886]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:10.493436]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:10.501981]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:10.700857]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:10.718134]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:10.725433]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:27.397865]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:27.413080]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:27.415178]:[0;32mDesconexión exitosa de la base de datos
+ [0;36m[2024-01-31 16:17:27.689746]:[0;32mConexión exitosa a la base de datos
+ [0;36m[2024-01-31 16:17:27.704252]:[0;32mAbono registrado con exito!!! detail 
+ [0;36m[2024-01-31 16:17:27.710086]:[0;32mDesconexión exitosa de la base de datos
