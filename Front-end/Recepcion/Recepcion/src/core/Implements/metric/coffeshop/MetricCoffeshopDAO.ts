@@ -4,16 +4,17 @@ import { PATHMUNAYSYSY } from "../../../../Config/routes/pathsMuanaysys";
 
 import { IMetricCoffeshop } from "../../../Interfaces/metric/coffeshop/IMetricCoffeshop";
 
+
 /**
- * lectura de las metricas  del las ventas y pagos en el coffeshop
- * @date 31/1/2024 - 4:21:24 p. m.
+ * Description placeholder
+ * @date 31/1/2024 - 4:33:07 p. m.
  *
  * @export
  * @class MetricCoffeshopDAO
  * @typedef {MetricCoffeshopDAO}
  * @implements {IMetricCoffeshop}
  */
-export class MetricCoffeshopDAO implements IMetricCoffeshop{
+export class MetricCoffeshopDAO implemMnts IMetricCoffeshop{
     private paths =  new PATHMUNAYSYSY()
     private API=  this.paths.PathAPI()
     private prefijo='metric/coffeshop'

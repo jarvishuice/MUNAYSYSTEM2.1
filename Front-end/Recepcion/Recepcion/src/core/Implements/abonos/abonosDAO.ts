@@ -1,6 +1,15 @@
 import { PATHMUNAYSYSY } from "../../../Config/routes/pathsMuanaysys";
 import { IAbonos } from "../../Interfaces/abonos/IAbonos"
 
+/**
+ * Description placeholder
+ * @date 31/1/2024 - 4:28:49 p. m.
+ *
+ * @export
+ * @class AbonosDAO
+ * @typedef {AbonosDAO}
+ * @extends {(IAbonos)}
+ */
 export class AbonosDAO extends(IAbonos){
     private sede = localStorage.getItem("sede")?? "inicia seccion"
     private paths =  new PATHMUNAYSYSY()
